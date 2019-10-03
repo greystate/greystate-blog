@@ -23,6 +23,25 @@
 		"oAP": "/build/build",
 		"oF": 0
 		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 0,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/README.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/reference.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -38,9 +57,9 @@
 		"oAP": "/build/images/Regex-The-2008-dark.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
-		"q": 100
+		"q": 80
 		},
 	"/src/images/Regex-The-2008.png": {
 		"ft": 32768,
@@ -49,9 +68,9 @@
 		"oAP": "/build/images/Regex-The-2008.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
-		"q": 100
+		"q": 80
 		},
 	"/src/less/app.less": {
 		"aP": 1,
