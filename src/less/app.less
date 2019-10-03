@@ -1,0 +1,24 @@
+@import (less) "../../vendor/modern-reset/reset.css";
+
+:root {
+	font-size: 120%;
+	color-scheme: light dark;
+}
+
+article {
+	max-width: 75ch;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@supports (display: grid) {
+	body {
+		display: grid;
+		grid-template-columns: 2fr [content-start] minmax(20ch, 75ch) [content-end] 1fr;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+	article {
+		grid-column: content;
+	}
+}
