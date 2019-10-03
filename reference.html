@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Blog Test</title>
+	<link rel="stylesheet" href="reset.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<article>
+	<h1>Regex, The (2008)</h1>
+
+	<abbr class="date" title="2008-12-18T22:43:05+0100">
+		<a rel="bookmark" href="http://greystate.dk/log/2008/12/18/regex-2008.html">18 Dec, 2008</a>
+	</abbr>
+	
+	<p>
+		So I have this list of movies I've seen - it's a plain text file accumulated from roughly the
+		steps outlined here - let's say I just saw the movie "Cloverfield" on DVD...
+	</p>
+	
+	<ol>
+		<li>Fire up <a href="http://www.opera.com" title="" rel="external">Opera</a></li>
+		<li>Type <kbd>g imdb cloverfield</kbd></li>
+		<li>
+			Click the first link in the results to go to the
+			<a href="http://www.imdb.com" title="The Internet Movie Database" rel="external">IMDb</a>
+			entry for that movie (to verify that it's indeed the one I saw)
+		</li>
+		<li>Select the movie's title on that page</li>
+		<li>
+			Hit <kbd title="Control+Option+Space">⌃ ⌥ SPACE</kbd> to open selected text in
+			<a href="http://docs.blacktree.com/quicksilver/quicksilver" title="Awesome tool" rel="external">Quicksilver</a>
+		</li>
+		<li>Type <kbd>AP</kbd> to get the command "Append to file..."</li>
+		<li>Hit <kbd>TAB</kbd> and hold <kbd>F</kbd> (for "filmlisten.txt")</li>
+	</ol>
+	
+	<p>
+		That's it — the movie has been added to my list.
+	</p>
+	
+	<p>
+		The problem is: At some point in time between the inauguration of my sacred file
+		and <em>now</em>, they (IMDb) changed the format of the title for movies starting with "The ...".
+		You see, before (back in the day, once upon a time, etc.) — Kubrick's 1980 movie
+		was listed as <strong>Shining, The (1980)</strong> whereas now, it's listed as
+		<a href="http://www.imdb.com/title/tt0081505/" title="" rel="external">The Shining (1980)</a>.
+	</p>
+	
+	<p>
+		Being so darn picky about that, my textfile was a mess... you see, I like a <em>certain</em> kind of
+		order in the universe (at least in my part of it) so once in while, I'd follow that last step
+		with an additional <kbd title="Control+Space, then Return">⌃ SPACE + ↩</kbd> to open the textfile in
+		<a href="http://www.macromates.com" title="" rel="external">TextMate</a>, then <kbd>F5</kbd> to
+		sort the lines alphabetically.
+	</p>
+	
+	<p>
+		But alphabetically just wasn't good enough anymore, because some movies we're listed in the old format
+		while others were in the new one. And there were just about a couple of hundred titles pending a fix
+		so I needed a command of some sort — and no, doing a simple <em>Find &amp; Replace</em> wouldn't
+		be able to fix this.
+	</p>
+	
+	<h2>Enter Regex — Regular Expression(s)</h2>
+	
+	<p>
+		A Regular Expression is the perfect solution here, because you can easily match something, store it and
+		then come back and fetch it again. TextMate lets you do this in the Find &amp; Replace dialog, so I
+		hammered this in:
+	</p>
+	
+	<figure>
+		<picture>
+			<source srcset="images/Regex-The-2008-dark.png" media="(prefers-color-scheme: dark)" />
+			<img src="images/Regex-The-2008.png" width="710" height="364" alt="Regular Expression: ^(.*)(,) (The)( \(\d{4}\))\s*$ - Replacement: $3 $1$4" />
+		</picture>
+		<figcaption>Regular Expression: <code>^(.*)(,) (The)( \(\d{4}\))\s*$</code> - Replacement: <code>$3 $1$4</code></figcaption>
+	</figure>
+	
+	<p>
+		- and there you have it. All titles properly titled and order has once again been restored to <em>The Galaxy</em>.
+	</p>
+</article>
+
+</body>
+</html>
