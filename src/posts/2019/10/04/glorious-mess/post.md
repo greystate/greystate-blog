@@ -1,6 +1,7 @@
 # What a Glorious Mess
 
-I have a Point to make, and since I've been very fond of CoffeeScript for years, I'll be using that to make it:
+I have a Point to make, and since I've been very fond of CoffeeScript for years,
+I'll be using that to make it:
 
 ```coffeescript
 class Point
@@ -11,7 +12,8 @@ class Point
 
 ```
 
-In the good old days of CoffeeScript 1.x, this would compile to the following perfectly readable JS to serve in just about any browser:
+In the good old days of CoffeeScript 1.x, this would compile to the following
+perfectly readable JS to serve in just about any browser:
 
 ```javascript
 var Point;
@@ -31,7 +33,15 @@ Point = (function() {
 })();
 ```
 
-Then CoffeeScript 2.x came along, and because ES6 in the meantime had adopted quite a lot of the stuff we already knew from CoffeeScript, the compiled code looked much more like the CoffeeScript we'd written:
+When I say "perfectly readable", I mean just that - if someone wanted to take a peek at the
+source for something, the browser's "View Source" menu was brilliant and the above would make
+sense to most developers familiar with JavaScript.
+
+## New Shiny
+
+Then CoffeeScript 2.x came along, and because ES6 in the meantime had adopted
+quite a lot of the stuff we already knew from CoffeeScript, the compiled code
+looked much more like the CoffeeScript we'd written:
 
 ```javascript
 var Point;
@@ -48,7 +58,10 @@ Point = class Point {
 };
 ```
 
-But there's of course a catch here... the compiled code (ES6) no longer runs in just about every browser, so we need to use another post-processor called Babel to generate something that can be served to just about any browser... only, it creates a horrible mess that no one would ever want to read when inspecting the source:
+But there's of course a catch here... the compiled code (ES6) no longer runs in
+just about every browser, so we need to use another post-processor called Babel
+to generate something that can be served to just about any browser...
+only, it creates a horrible mess that no one would ever want to read when inspecting the source:
 
 ```javascript
 "use strict";
@@ -87,4 +100,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 }).call(void 0);
 ```
 
-How on earth is *anyone* going to learn from reading that? Let alone spark that curious "Aah, I see - so *that's* how you do that..." that fuels so many hours of poking around other people's source code, that got myself to where I am today?
+How on earth is *anyone* going to learn from reading that? Let alone spark that
+curious "Aah, I see - so *that's* how you do that..." that fuels so many hours of
+poking around other people's source code, that got myself to where I am today?
+
