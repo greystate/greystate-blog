@@ -89,6 +89,40 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/src/less/prism-dark.less": {
+		"aP": 1,
+		"bl": 1,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/build/assets/prism-dark.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/src/less/prism-light.less": {
+		"aP": 1,
+		"bl": 1,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/build/assets/prism-light.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/src/posts/2008/12/18/regex-2008/post.md": {
 		"cB": 0,
 		"cS": 0,
@@ -163,6 +197,37 @@
 		"oAP": "/build/vendor/modern-reset/reset.css",
 		"oF": 0,
 		"oS": 0
+		},
+	"/vendor/prism/prism-coy.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/vendor/prism/prism-coy.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"/vendor/prism/prism-tomorrow-night.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/vendor/prism/prism-tomorrow-night.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"/vendor/prism/prism.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/assets/prism.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		}
 	},
 "hooks": [
