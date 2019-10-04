@@ -1,31 +1,111 @@
+@import "constants";
 @import (less) "../../vendor/modern-reset/reset.css";
+
+@supports(--variable: "property") {
+	:root {
+		--bgcolor-light: @bg_color_light;
+		--fgcolor-light: @text_color_light;
+
+		--bgcolor-dark: @bg_color_dark;
+		--fgcolor-dark: @text_color_dark;
+	
+		--bgcolor: var(--bgcolor-light);
+		--fgcolor: var(--fgcolor-light);
+	}
+} // @supports
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bgcolor: var(--bgcolor-dark);
+		--fgcolor: var(--fgcolor-dark);
+	}
+	
+	article h1 { color: var(--fgcolor-dark); }
+}
 
 :root {
 	font-size: 120%;
+
 	color-scheme: light dark;
 }
 
+body {
+	font-size: 1em;
+	font-family: "Avenir Next", Helvetica, sans-serif;
+	
+	padding-right: 1em;
+	padding-left: 1em;
+	
+	background: @bg_color_light;
+	background: var(--bgcolor);
+
+	color: @text_color_light;
+	color: var(--fgcolor);
+}
+
+h1 {
+	background-color: rgba(100, 0, 0, 0.3);
+	box-shadow: -100px 0 0 10px rgba(100, 0, 0, 0.3);
+	padding-right: 10px;
+	color: #000;
+	font-weight: 600;
+	font-size: 1.7rem;
+	border-right: 10px solid;
+}
+
+h2 {
+	font-size: 1.2rem;
+}
+
 article {
+	margin: 3em auto;
 	max-width: 75ch;
-	margin-right: auto;
-	margin-left: auto;
 	
-	code[class*="language-"],
-	pre[class*="language-"] {
-		font-size: 0.8em;
+	pre[class*=language-] {
+		margin-top: 3em;
+		margin-bottom: 2em;
+
+		&, code[class*="language-"] { font-size: 0.8rem; }
 	}
 	
-} 
+	figure {
+		border: 2px solid rgba(0, 0, 0, 0.3);
+		border-bottom: 0;
+	}
+	
+	figcaption {
+		text-align: center;
+		font-size: 0.9rem;
+		padding-top: 0.1em;
+		padding-bottom: 0.1em;
+		background: rgba(0, 0, 0, 0.3);
+	}
+}
 
 
+
+// This is for browsers that can handle CSS Grid
 @supports (display: grid) {
+
 	body {
-		display: grid;
-		grid-template-columns: 2fr [content-start] minmax(20ch, 75ch) [content-end] 1fr;
-		padding-right: 1em;
-		padding-left: 1em;
+		// Remove the safety padding
+		padding-right: 0;
+		padding-left: 0;
 	}
-	article {
-		grid-column: content;
+	
+	article when (@enable_grid = true) {
+		max-width: unset;
+		
+		display: grid;
+//		grid-template-columns: 2fr [content-start] minmax(20ch, 75ch) [content-end] 1fr;
+		grid-template-columns: 3fr [wide-start] 3fr [content-start] 1fr 2fr 3fr 2fr 1fr 3fr [content-end] 2fr [wide-end] 3fr;
+
+		> * {
+			grid-column: content;
+		}
+		
+		> pre[class*=language-] {
+			grid-column: wide;
+		}
 	}
 }
