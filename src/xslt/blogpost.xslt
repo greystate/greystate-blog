@@ -63,6 +63,13 @@
 				
 			</article>
 			
+			<nav class="navbar">
+				<ul class="links">
+					<li><a href="/">Frontpage</a></li>
+					<li><a href="/posts/">Blog</a></li>
+				</ul>
+			</nav>
+			
 			<script src="/assets/prism.min.js"></script>
 		</xsl:copy>
 	</xsl:template>
