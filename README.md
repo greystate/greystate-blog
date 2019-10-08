@@ -9,11 +9,13 @@ This time, I'm using some wonderful tooling:
 - A CodeKit hook kicks in and runs an *XSLT transform* on the HTML file to produce the final `index.html` file
 - Deploy script copies the blog structure to the greystate.github.io repo for publication with **Github Pages**
 
-[CK]: https://codekitapp.com
 
-The XSLT file is of course the real beauty of it all, since it enables me to do *whatever* I want with the final HTML output.
+The [XSLT file][XSLT] is of course the real beauty of it all, since it enables me to do *whatever* I want with the final HTML output.
 (Oh, and before you run away screaming: I have just about 20 years of experience with XSLT so I'll be fine :-)
 
 Feel free to poke around :)
 
 — Chriztian Steinmeier, October 2019.
+
+[CK]: https://codekitapp.com
+[XSLT]: src/xslt/blogpost.xslt
