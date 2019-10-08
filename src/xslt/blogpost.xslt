@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--
+	blogpost.xslt
+	
+	NOTE: This transform runs on the *generated* HTML from the original Markdown file.
+	It's run with `xsltproc` using the `html` option which is lax with HTML
+	as input instead of XML.
+-->
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -9,7 +16,11 @@
 		doctype-system="about:legacy-compat"
 	/>
 	
-	<!-- Identity transform -->
+	<!--
+	Identity transform
+	Copies elements, attributes and text verbatim, but leaves
+	a backdoor open for any other template to claim "rendership".
+	-->
 	<xsl:template match="* | text()">
 		<xsl:copy>
 			<xsl:copy-of select="@*" />
@@ -17,7 +28,13 @@
 		</xsl:copy>
 	</xsl:template>
 	
-	<!-- Specific templates -->
+	<!-- :: 	Specific templates :: -->
+	
+	<!--
+	Generate the `head` tag
+	Handles getting the title of the post, to put in ... the <title> tag!
+	Also adds the CSS files (main + Prism)
+	-->
 	<xsl:template match="head">
 		<xsl:copy>
 			<xsl:comment>This is transformed output - no need to edit</xsl:comment>
@@ -32,6 +49,10 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	<!--
+	The body template wraps the post content in an `article` element and adds the navbar.
+	Also adds the Prism JS file.
+	-->
 	<xsl:template match="body">
 		<xsl:copy>
 			<article>
@@ -43,7 +64,11 @@
 			<script src="/assets/prism.min.js"></script>
 		</xsl:copy>
 	</xsl:template>
-	
+
+	<!--
+	To make Prism handle the syntax highlighting we need
+	to slightly modify the `class` attribute of `code` elements.
+	-->
 	<xsl:template match="code[@class]">
 		<xsl:copy>
 			<xsl:attribute name="class"><xsl:value-of select="concat('lang-', @class)" /></xsl:attribute>
