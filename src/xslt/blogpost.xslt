@@ -15,6 +15,8 @@
 		indent="yes" omit-xml-declaration="yes"
 		doctype-system="about:legacy-compat"
 	/>
+
+	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
 	
 	<!--
 	Identity transform
@@ -74,6 +76,25 @@
 			<xsl:attribute name="class"><xsl:value-of select="concat('lang-', @class)" /></xsl:attribute>
 			<xsl:apply-templates />
 		</xsl:copy>
+	</xsl:template>
+
+	<!--
+	This renders the current format of the post's publish-date.
+	The markdown contains a `time` element with an additional data attribute
+	holding the post's slug for use in the bookmark link.
+	-->
+	<xsl:template match="body/p[time]">
+		<xsl:variable name="dateval" select="time/@datetime" />
+		<xsl:variable name="post-slug" select="time/@data-slug" />
+		
+		<xsl:variable name="year" select="substring($dateval, 1, 4)" />
+		<xsl:variable name="month" select="substring($dateval, 6, 2)" />
+		<xsl:variable name="date" select="substring($dateval, 9, 2)" />
+		<abbr class="date" title="{@datetime}">
+			<a rel="bookmark" href="{$blog-url}{$year}/{$month}/{$date}/{$post-slug}/">
+				<xsl:copy-of select="time" />
+			</a>
+		</abbr>
 	</xsl:template>
 
 </xsl:stylesheet>
