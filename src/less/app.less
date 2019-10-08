@@ -3,24 +3,29 @@
 
 @supports(--variable: "property") {
 	:root {
-		--bgcolor-light: @bg_color_light;
-		--fgcolor-light: @text_color_light;
+		   --bgcolor-light: @bg_color_light;
+		   --fgcolor-light: @text_color_light;
+		--code-color-light: @code_color_light;
 
-		--bgcolor-dark: @bg_color_dark;
-		--fgcolor-dark: @text_color_dark;
+		    --bgcolor-dark: @bg_color_dark;
+		    --fgcolor-dark: @text_color_dark;
+		 --code-color-dark: @code_color_dark;
 	
-		--bgcolor: var(--bgcolor-light);
-		--fgcolor: var(--fgcolor-light);
+		         --bgcolor: var(--bgcolor-light);
+		         --fgcolor: var(--fgcolor-light);
+		       --codecolor: var(--code-color-light);
 	}
 } // @supports
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bgcolor: var(--bgcolor-dark);
-		--fgcolor: var(--fgcolor-dark);
+		  --bgcolor: var(--bgcolor-dark);
+		  --fgcolor: var(--fgcolor-dark);
+		--codecolor: var(--codecolor-dark);
 	}
 	
 	article h1 { color: var(--fgcolor-dark); }
+	pre:not([class]) { color: var(--code-color-dark); }
 }
 
 :root {
@@ -51,16 +56,24 @@ h1 {
 	font-weight: 600;
 	font-size: 1.7rem;
 	border-right: 10px solid;
+	
+	+ .date {
+		text-align: right;
+	}
 }
 
 h2 {
 	font-size: 1.2rem;
+	
+	+ * {
+		margin-top: 0;
+	}
 }
 
 article {
 	margin: 3em auto;
 	max-width: 75ch;
-	
+
 	pre[class*=language-] {
 		margin-top: 3em;
 		margin-bottom: 2em;
@@ -79,6 +92,15 @@ article {
 		padding-top: 0.1em;
 		padding-bottom: 0.1em;
 		background: rgba(0, 0, 0, 0.3);
+	}
+	
+	// This is for when Prism hasn't kicked in (i.e. probably no JS)
+	pre:not([class]) {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 1rem;
+		overflow-x: auto;
+		color: #000;
+		color: var(--codecolor);
 	}
 }
 
