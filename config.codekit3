@@ -50,6 +50,17 @@
 		"oAP": "/build/reference.html",
 		"oF": 1
 		},
+	"/src/images/greystate_logo.png": {
+		"ft": 32768,
+		"iS": 11204,
+		"oA": 0,
+		"oAP": "/build/images/greystate_logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 70
+		},
 	"/src/images/Regex-The-2008-dark.png": {
 		"ft": 32768,
 		"iS": 270766,
@@ -189,6 +200,25 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/posts/2019/10/04/glorious-mess/post.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/src/posts/2019/10/08/shapeup/post.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 0,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/posts/2019/10/08/shapeup/post.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
