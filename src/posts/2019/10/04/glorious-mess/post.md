@@ -1,5 +1,7 @@
 # What a Glorious Mess
 
+<time data-slug="glorious-mess" datetime="2019-10-04T21:42:00+0200">4 Oct, 2019</time>
+
 I have a Point to make, and since I've been very fond of CoffeeScript for years,
 I'll be using that to make it:
 
