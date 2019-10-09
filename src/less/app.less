@@ -48,8 +48,9 @@ body {
 	color: var(--fgcolor);
 	
 	background-image: url(/images/greystate_logo.png);
+	background-size: 20vw;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 1rem 4.5rem;
 	background-attachment: fixed;
 	background-blend-mode: multiply;
 }
@@ -77,13 +78,16 @@ h2 {
 }
 
 article {
-	margin: 3em auto;
+	margin: 2em auto 3rem;
 	max-width: 75ch;
 
-	pre[class*=language-] {
+	pre[class*=language-],
+	blockquote {
 		margin-top: 3em;
 		margin-bottom: 2em;
+	}
 
+	pre[class*=language-] {
 		&, code[class*="language-"] { font-size: 0.8rem; }
 	}
 	
@@ -98,6 +102,37 @@ article {
 		padding-top: 0.1em;
 		padding-bottom: 0.1em;
 		background: rgba(0, 0, 0, 0.3);
+	}
+	
+	blockquote {
+		margin-top: 2rem;
+		position: relative;
+		font-style: italic;
+		background: #000;
+		color: #fff;
+		padding: 1rem 1rem 1rem 3rem;
+		border-left: 6px solid #999;
+		
+		&::before, &::after {
+			font-style: normal;
+			font-size: 3rem;
+			line-height: 1;
+			height: 1rem;
+			opacity: 0.5;
+			position: absolute;
+		}
+		
+		&::before {
+			content: open-quote;
+			left: 1rem;
+			top: 0.1rem;
+		}
+
+		&::after {
+			content: close-quote;
+			right: 1.3rem;
+			bottom: 0.4rem;
+		}
 	}
 	
 	// This is for when Prism hasn't kicked in (i.e. probably no JS)
@@ -134,6 +169,10 @@ article {
 		
 		> pre[class*=language-] {
 			grid-column: wide;
+		}
+		
+		> blockquote {
+			grid-column: 4 / 9;
 		}
 	}
 }
