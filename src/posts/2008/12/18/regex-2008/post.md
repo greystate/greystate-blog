@@ -6,12 +6,12 @@ So I have this list of movies I've seen - it's a plain text file accumulated fro
 steps outlined here - let's say I just saw the movie "Cloverfield" on DVD...
 	
 1. Fire up [Opera][OPERA]
-1. Type <kbd>g imdb cloverfield</kbd>
-1. Click the first link in the results to go to the [IMDb][IMDB] entry for that movie (to verify that it's indeed the one I saw)
-1. Select the movie's title on that page</li>
-1. Hit <kbd title="Control+Option+Space">⌃ ⌥ SPACE</kbd> to open selected text in [Quicksilver][QS]
-1. Type <kbd>AP</kbd> to get the command "Append to file..."
-1. Hit <kbd>TAB</kbd> and hold <kbd>F</kbd> (for "filmlisten.txt")
+2. Type <kbd>g imdb cloverfield</kbd>
+3. Click the first link in the results to go to the [IMDb][IMDB] entry for that movie (to verify that it's indeed the one I saw)
+4. Select the movie's title on that page</li>
+5. Hit <kbd title="Control+Option+Space">⌃ ⌥ SPACE</kbd> to open selected text in [Quicksilver][QS]
+6. Type <kbd>AP</kbd> to get the command "Append to file..."
+7. Hit <kbd>TAB</kbd> and hold <kbd>F</kbd> (for "filmlisten.txt")
 
 [OPERA]: https://www.opera.com
 [IMDB]: https://www.imdb.com "The Internet Movie Database"
