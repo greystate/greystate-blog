@@ -1,7 +1,7 @@
 @import "constants";
 @import (less) "../../vendor/modern-reset/reset.css";
 
-@supports(--variable: "property") {
+@supports(--property: "value") {
 	:root {
 		   --bgcolor-light: @bg_color_light;
 		   --fgcolor-light: @text_color_light;
@@ -54,10 +54,27 @@ body {
 	background-image: url(/images/greystate_logo.png);
 	background-size: 20vw;
 	background-repeat: no-repeat;
-	background-position: 1rem 4.5rem;
+	background-position: 1rem 6rem;
 	background-attachment: fixed;
 	background-blend-mode: multiply;
 }
+
+@supports(--property: "value") {
+
+	body {
+		background-image:
+			url(/images/greystate_logo.png),
+			linear-gradient(var(--bgnav, rgba(0, 0, 200, 0.1)), var(--bgnav, rgba(0, 0, 200, 0.1)));
+		background-size:
+			20vw auto,
+			23vw 32px;
+		background-repeat: no-repeat, repeat-y;
+		background-position: 1rem 6rem, left center;
+		background-attachment: fixed;
+		background-blend-mode: multiply, normal;
+	}
+
+} // @supports
 
 h1 {
 	background-color: rgba(100, 0, 0, 0.3);
@@ -179,7 +196,7 @@ article {
 // This is for browsers that can handle CSS Grid
 @supports (display: grid) {
 
-	body {
+	body when (@enable_grid = true) {
 		// Remove the safety padding
 		padding-right: 0;
 		padding-left: 0;
@@ -189,19 +206,12 @@ article {
 		max-width: unset;
 		
 		display: grid;
-//		grid-template-columns: 2fr [content-start] minmax(20ch, 75ch) [content-end] 1fr;
 		grid-template-columns: 3fr [wide-start] 3fr [content-start] 1fr 2fr 3fr 2fr 1fr 3fr [content-end] 2fr [wide-end] 3fr;
 
-		> * {
-			grid-column: content;
-		}
+		> * { grid-column: content; }
+		> p { max-width: 75ch; }
+		> pre[class*=language-] { grid-column: wide; }
+		> blockquote { grid-column: 4 / 9; }
 		
-		> pre[class*=language-] {
-			grid-column: wide;
-		}
-		
-		> blockquote {
-			grid-column: 4 / 9;
-		}
 	}
 }
