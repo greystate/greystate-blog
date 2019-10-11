@@ -6,14 +6,17 @@
 		   --bgcolor-light: @bg_color_light;
 		   --fgcolor-light: @text_color_light;
 		--code-color-light: @code_color_light;
+	  --bgcolornav-light: @bg_color_navbar_light;
 
 		    --bgcolor-dark: @bg_color_dark;
 		    --fgcolor-dark: @text_color_dark;
 		 --code-color-dark: @code_color_dark;
+		 --bgcolornav-dark: @bg_color_navbar_dark;
 	
 		         --bgcolor: var(--bgcolor-light);
 		         --fgcolor: var(--fgcolor-light);
 		       --codecolor: var(--code-color-light);
+		           --bgnav: var(--bgcolornav-light);
 	}
 } // @supports
 
@@ -22,6 +25,7 @@
 		  --bgcolor: var(--bgcolor-dark);
 		  --fgcolor: var(--fgcolor-dark);
 		--codecolor: var(--codecolor-dark);
+		    --bgnav: var(--bgcolornav-dark);
 	}
 	
 	article h1 { color: var(--fgcolor-dark); }
@@ -146,6 +150,31 @@ article {
 }
 
 
+.navbar {
+	position: relative;
+	min-height: 100vh;
+	width: 23vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	
+	.links {
+		margin-top: 40vh;
+		margin-left: 1em;
+		
+		a {
+			padding: 0.3em 0.8em;
+			display: inline-block;
+			background: #000;
+			color: #fff;
+		}
+		
+		li + li > a {
+			margin-top: 0.2em;
+		}
+	}
+}
 
 // This is for browsers that can handle CSS Grid
 @supports (display: grid) {
