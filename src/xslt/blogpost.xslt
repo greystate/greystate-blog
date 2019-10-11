@@ -67,6 +67,7 @@
 				<ul class="links">
 					<li><a href="/">Frontpage</a></li>
 					<li><a href="/posts/">Blog</a></li>
+					<li><a href="/resources/objredux/">Object Builder</a></li>
 				</ul>
 			</nav>
 			
