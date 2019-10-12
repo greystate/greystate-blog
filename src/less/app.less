@@ -190,6 +190,15 @@ article {
 		li + li > a {
 			margin-top: 0.2em;
 		}
+		
+		.archives {
+			margin-top: 0.2em;
+			margin-left: 0.5em;
+			
+			a {
+				background: #211;
+			}
+		}
 	}
 }
 
@@ -206,11 +215,11 @@ article {
 		max-width: unset;
 		
 		display: grid;
-		grid-template-columns: 3fr [wide-start] 3fr [content-start] 1fr 2fr 3fr 2fr 1fr 3fr [content-end] 2fr [wide-end] 3fr;
+		grid-template-columns: 3fr [wide-start] 1fr [code-start] 2fr [content-start] 1fr 2fr 3fr 2fr 1fr 3fr [content-end] 2fr [wide-end code-end] 3fr;
 
 		> * { grid-column: content; }
 		> p { max-width: 75ch; }
-		> pre[class*=language-] { grid-column: wide; }
+		> pre[class*=language-] { grid-column: code; }
 		> blockquote { grid-column: 4 / 9; }
 		
 	}
