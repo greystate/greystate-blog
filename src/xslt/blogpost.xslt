@@ -63,13 +63,7 @@
 				
 			</article>
 			
-			<nav class="navbar">
-				<ul class="links">
-					<li><a href="/">Frontpage</a></li>
-					<li><a href="/posts/">Blog</a></li>
-					<li><a href="/resources/objredux/">Object Builder</a></li>
-				</ul>
-			</nav>
+			<xsl:call-template name="navigation" />
 			
 			<script src="/assets/prism.min.js"></script>
 		</xsl:copy>
@@ -107,5 +101,25 @@
 			</a>
 		</abbr>
 	</xsl:template>
-
+	
+	<!--
+	Render some navigation for the site.
+	-->
+	<xsl:template name="navigation">
+		<nav class="navbar">
+			<ul class="links">
+				<li><a href="/">Frontpage</a></li>
+				<li>
+					<a href="/posts/">Blog</a>
+					<ul class="archives">
+						<li><a href="/posts/2019/">2019</a></li>
+						<li><a href="/posts/2017/">2017</a></li>
+						<li><a href="/posts/2008/">2008</a></li>
+					</ul>
+				</li>
+				<li><a href="/resources/objredux/">Object Builder</a></li>
+			</ul>
+		</nav>
+	</xsl:template>
+	
 </xsl:stylesheet>
