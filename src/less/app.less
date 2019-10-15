@@ -165,41 +165,6 @@ article {
 }
 
 
-.navbar {
-	position: relative;
-	min-height: 100vh;
-	width: 23vw;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	
-	.links {
-		margin-top: 40vh;
-		margin-left: 1em;
-		
-		a {
-			padding: 0.3em 0.8em;
-			display: inline-block;
-			background: #000;
-			color: #fff;
-		}
-		
-		li + li > a {
-			margin-top: 0.2em;
-		}
-		
-		.archives {
-			margin-top: 0.2em;
-			margin-left: 0.5em;
-			
-			a {
-				background: #211;
-			}
-		}
-	}
-}
-
 // This is for browsers that can handle CSS Grid
 @supports (display: grid) {
 
@@ -222,3 +187,5 @@ article {
 		
 	}
 }
+
+@import "navbar";
