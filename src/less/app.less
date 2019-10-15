@@ -96,74 +96,6 @@ h2 {
 	+ * { margin-top: 0; }
 }
 
-article {
-	margin: 2em auto 3rem;
-	max-width: 75ch;
-
-	pre[class*=language-],
-	blockquote {
-		margin-top: 3em;
-		margin-bottom: 2em;
-	}
-
-	pre[class*=language-] {
-		&, code[class*="language-"] { font-size: 0.8rem; }
-	}
-	
-	figure {
-		border: 2px solid rgba(0, 0, 0, 0.3);
-		border-bottom: 0;
-	}
-	
-	figcaption {
-		text-align: center;
-		font-size: 0.9rem;
-		padding-top: 0.1em;
-		padding-bottom: 0.1em;
-		background: rgba(0, 0, 0, 0.3);
-	}
-	
-	blockquote {
-		margin-top: 2rem;
-		position: relative;
-		font-style: italic;
-		background: #000;
-		color: #fff;
-		padding: 1rem 1rem 1rem 3rem;
-		border-left: 6px solid #999;
-		
-		&::before, &::after {
-			font-style: normal;
-			font-size: 3rem;
-			line-height: 1;
-			height: 1rem;
-			opacity: 0.5;
-			position: absolute;
-		}
-		
-		&::before {
-			content: open-quote;
-			left: 1rem;
-			top: 0.1rem;
-		}
-
-		&::after {
-			content: close-quote;
-			right: 1.3rem;
-			bottom: 0.4rem;
-		}
-	}
-	
-	// This is for when Prism hasn't kicked in (i.e. probably no JS)
-	pre:not([class]) {
-		background: rgba(0, 0, 0, 0.5);
-		padding: 1rem;
-		overflow-x: auto;
-		color: #000;
-		color: var(--codecolor);
-	}
-}
-
 
 // This is for browsers that can handle CSS Grid
 @supports (display: grid) {
@@ -174,18 +106,7 @@ article {
 		padding-left: 0;
 	}
 	
-	article when (@enable_grid = true) {
-		max-width: unset;
-		
-		display: grid;
-		grid-template-columns: 3fr [wide-start] 1fr [code-start] 2fr [content-start] 1fr 2fr 3fr 2fr 1fr 3fr [content-end] 2fr [wide-end code-end] 3fr;
-
-		> * { grid-column: content; }
-		> p { max-width: 75ch; }
-		> pre[class*=language-] { grid-column: code; }
-		> blockquote { grid-column: 4 / 9; }
-		
-	}
 }
 
+@import "article";
 @import "navbar";
