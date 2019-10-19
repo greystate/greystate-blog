@@ -16,6 +16,7 @@
 		doctype-system="about:legacy-compat"
 	/>
 
+
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
 	
 	<!--
@@ -23,7 +24,7 @@
 	Copies elements, attributes and text verbatim, but leaves
 	a backdoor open for any other template to claim "rendership".
 	-->
-	<xsl:template match="* | text()">
+	<xsl:template match="* | text()" priority="-1">
 		<xsl:copy>
 			<xsl:copy-of select="@*" />
 			<xsl:apply-templates select="* | text()" />
@@ -63,7 +64,7 @@
 				
 			</article>
 			
-			<xsl:call-template name="navigation" />
+			<xsl:call-template name="RenderNavigation" />
 			
 			<script src="/assets/prism.min.js"></script>
 		</xsl:copy>
@@ -105,21 +106,12 @@
 	<!--
 	Render some navigation for the site.
 	-->
-	<xsl:template name="navigation">
+	<xsl:template name="RenderNavigation">
 		<nav class="navbar">
-			<ul class="links">
-				<li><a href="/">Frontpage</a></li>
-				<li>
-					<a href="/posts/">Blog</a>
-					<ul class="archives">
-						<li><a href="/posts/2019/">2019</a></li>
-						<li><a href="/posts/2017/">2017</a></li>
-						<li><a href="/posts/2008/">2008</a></li>
-					</ul>
-				</li>
-				<li><a href="/resources/objredux/">Object Builder</a></li>
-			</ul>
+			<xsl:apply-templates select="document('../xml/navigation.xml')/navigation" />
 		</nav>
 	</xsl:template>
-	
+
+	<xsl:include href="navigation.xslt" />
+
 </xsl:stylesheet>
