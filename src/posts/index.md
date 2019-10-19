@@ -1,7 +1,9 @@
+<data data-slug="posts"></data>
+
 # Greystate Weblog
 
 Latest posts:
 
-- [Shape Up!](/posts/2019/10/08/shapeup/)
-- [What a Glorious Mess](/posts/2019/10/04/glorious-mess/)
+- [Shape Up!](/log/2019/10/08/shapeup/)
+- [What a Glorious Mess](/log/2019/10/04/glorious-mess/)
 
