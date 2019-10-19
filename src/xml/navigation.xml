@@ -17,7 +17,7 @@
 		</link>
 	</link>
 	<link slug="resources" name="Resources" subclass="res">
-		<link slug="objredux" name="Object Builder" />
-		<link slug="umbraco/razor-reference" name="Razor QuickRef" />
+		<link url="https://greystate.dk/resources/objredux/" slug="objredux" name="Object Builder" />
+		<link url="https://greystate.dk/resources/umbraco/razor-reference/" slug="umbraco/razor-reference" name="Razor QuickRef" />
 	</link>
 </navigation>
