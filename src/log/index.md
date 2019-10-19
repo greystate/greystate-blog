@@ -1,4 +1,4 @@
-<data data-slug="posts"></data>
+<data data-slug="log"></data>
 
 # Greystate Weblog
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
-	<link slug="posts" name="Blog" subclass="archives">
+	<link slug="log" name="Blog" subclass="archives">
 		<link name="2008">
 			<link slug="05" name="May" hide="yes" />
 			<link slug="12" name="December" hide="yes" />
