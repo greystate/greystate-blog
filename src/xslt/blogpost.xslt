@@ -107,8 +107,11 @@
 	Render some navigation for the site.
 	-->
 	<xsl:template name="RenderNavigation">
+		<xsl:variable name="data" select="//body//data[@data-slug]" />
 		<nav class="navbar">
-			<xsl:apply-templates select="document('../xml/navigation.xml')/navigation" />
+			<xsl:apply-templates select="document('../xml/navigation.xml')/navigation">
+				<xsl:with-param name="currentPage" select="$data/@data-slug" />
+			</xsl:apply-templates>
 		</nav>
 	</xsl:template>
 
