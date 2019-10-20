@@ -103,6 +103,10 @@
 		</abbr>
 	</xsl:template>
 	
+	<xsl:template match="body/p[not(normalize-space())]">
+		<!-- Strip empty <p>s -->
+	</xsl:template>
+	
 	<!--
 	Render some navigation for the site.
 	-->
