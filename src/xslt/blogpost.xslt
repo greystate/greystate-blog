@@ -18,6 +18,7 @@
 
 
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
+	<xsl:variable name="data" select="//body//data[@data-slug]" />
 	
 	<!--
 	Identity transform
@@ -87,13 +88,13 @@
 	-->
 	<xsl:template match="body/p[time]">
 		<xsl:variable name="dateval" select="time/@datetime" />
-		<xsl:variable name="post-slug" select="time/@data-slug" />
+		<xsl:variable name="slug" select="$data/@data-slug" />
 		
 		<xsl:variable name="year" select="substring($dateval, 1, 4)" />
 		<xsl:variable name="month" select="substring($dateval, 6, 2)" />
 		<xsl:variable name="date" select="substring($dateval, 9, 2)" />
 		<abbr class="date" title="{@datetime}">
-			<a rel="bookmark" href="{$blog-url}{$year}/{$month}/{$date}/{$post-slug}/">
+			<a rel="bookmark" href="{$blog-url}{$year}/{$month}/{$date}/{$slug}/">
 				<time>
 					<xsl:copy-of select="time/@datetime" />
 					<xsl:value-of select="normalize-space(time)" />
@@ -102,15 +103,23 @@
 		</abbr>
 	</xsl:template>
 	
-	<xsl:template match="body/p[not(normalize-space())]">
-		<!-- Strip empty <p>s -->
+	<!-- Open external links in a new window -->
+	<xsl:template match="a[starts-with(@href, 'http')][not(contains(@href, 'greystate.dk'))]">
+		<xsl:copy>
+			<xsl:copy-of select="@*" />
+			<xsl:attribute name="target">_blank</xsl:attribute>
+			<xsl:apply-templates select="* | text()" />
+		</xsl:copy>
+	</xsl:template>
+	
+	<xsl:template match="p[not(normalize-space())]">
+		<!-- Strip empty <p>s (or <p>s with all empty elements inside) -->
 	</xsl:template>
 	
 	<!--
 	Render some navigation for the site.
 	-->
 	<xsl:template name="RenderNavigation">
-		<xsl:variable name="data" select="//body//data[@data-slug]" />
 		<nav class="navbar">
 			<xsl:apply-templates select="document('../xml/navigation.xml')/navigation">
 				<xsl:with-param name="currentPage" select="$data/@data-slug" />

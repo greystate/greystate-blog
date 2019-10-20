@@ -36,12 +36,13 @@
 					<xsl:apply-templates select="$ancestors" mode="url" />
 				</xsl:attribute>
 				
-				<!-- If this is the home page override the href -->
-				<xsl:if test="@slug = '/'"><xsl:attribute name="href">/</xsl:attribute></xsl:if>
-				
-				<!-- If there's a complete URL is specified, use that instead -->
+				<!--
+				If there's a complete URL is specified,
+				use that instead and open in a new window
+				-->
 				<xsl:if test="normalize-space(@url)">
 					<xsl:attribute name="href"><xsl:value-of select="@url" /></xsl:attribute>
+					<xsl:attribute name="target">_blank</xsl:attribute>
 				</xsl:if>
 				
 				<!-- Should we add the aria-current attribute? -->
@@ -59,6 +60,12 @@
 					<xsl:apply-templates select="$children" />
 				</ul>
 			</xsl:if>
+		</li>
+	</xsl:template>
+	
+	<xsl:template match="link[@slug = '/']">
+		<li>
+			<a href="/"><xsl:value-of select="@name" /></a>
 		</li>
 	</xsl:template>
 	
