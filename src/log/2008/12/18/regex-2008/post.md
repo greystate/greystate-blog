@@ -1,6 +1,6 @@
 # Regex, The (2008)
 
-<time data-slug="regex-2008" datetime="2008-12-18T22:43:05+0100">18 Dec, 2008</time>
+<time datetime="2008-12-18T22:43:05+0100">18 Dec, 2008</time>
 	
 So I have this list of movies I've seen - it's a plain text file accumulated from roughly the
 steps outlined here - let's say I just saw the movie "Cloverfield" on DVD...
@@ -53,3 +53,5 @@ hammered this in:
 </figure>
 	
 \- and there you have it. All titles properly titled and order has once again been restored to *The Galaxy*.
+
+<data data-slug="regex-2008"></data>

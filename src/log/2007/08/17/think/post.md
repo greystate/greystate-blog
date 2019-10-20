@@ -1,5 +1,3 @@
-<data slug="think"></data>
-
 # Sometimes you need to *Think!*
 
 <time datetime="2007-08-17T01:05:32+0200">17 Aug, 2007</time>
@@ -20,3 +18,4 @@ and it will no longer work in macOS Catalina for sure, because of the switch to 
 [THINK]: http://freeverse.cachefly.net/Mac/Think/Think.dmg
 [THINK2]: https://download.cnet.com/Think/3001-2072_4-139813.html
 
+<data slug="think"></data>
