@@ -2,8 +2,12 @@
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
 	<link slug="log" name="Blog" subclass="archives">
+		<link name="2007">
+			<link slug="08" name="August" hide="yes" />
+		</link>
 		<link name="2008">
 			<link slug="05" name="May" hide="yes" />
+			<link slug="06" name="June" hide="yes" />
 			<link slug="12" name="December" hide="yes" />
 		</link>
 		<link name="2017">
@@ -16,6 +20,7 @@
 			</link>
 		</link>
 	</link>
+	<link slug="who" name="About" />
 	<link slug="resources" name="Resources" subclass="res">
 		<link url="https://greystate.dk/resources/objredux/" slug="objredux" name="Object Builder" />
 		<link url="https://greystate.dk/resources/umbraco/razor-reference/" slug="umbraco/razor-reference" name="Razor QuickRef" />
