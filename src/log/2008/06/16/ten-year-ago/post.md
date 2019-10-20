@@ -1,5 +1,3 @@
-<data slug="ten-years-ago"></data>
-
 # 10 Years Ago, Today
 
 <time datetime="2008-05-06T20:45:42+0200">16 Jun, 2008</time>
@@ -18,3 +16,5 @@ I know, I know - it would only be appropriate to provide you with some evidence,
 and I'm working on it - I'll put a couple of MP3's up later, but for now: Cheers!
 
 [SV]: https://www.vai.com/
+
+<data data-slug="ten-years-ago"></data>
