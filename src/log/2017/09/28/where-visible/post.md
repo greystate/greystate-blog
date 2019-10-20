@@ -1,6 +1,6 @@
 # Where Visible???
 
-<time data-slug="where-visible" datetime="2017-09-28T07:53:00+0200">28 Sep, 2017</time>
+<time datetime="2017-09-28T07:53:00+0200">28 Sep, 2017</time>
 
 Umbraco has (to my knowledge) always had a way to skip rendering certain documents in lists etc., by way of a property with the alias `umbracoNaviHide`. Not as part of the core code, mind you, but rather just a convention that's been adhered to in the templates you choose from, when creating a new macro (or a partial view) in the Backoffice.
 
@@ -55,5 +55,4 @@ As I said in a Slack channel recently, when asking about this:
 
 > [The Razor snippets are] using "magic" if you don't know anything about how you "hide" a page in Umbraco :-)
 
-
-
+<data data-slug="where-visible"></data>
