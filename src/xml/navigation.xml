@@ -2,22 +2,22 @@
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
 	<link slug="log" name="Blog" subclass="archives">
-		<link name="2007">
-			<link slug="08" name="August" hide="yes" />
+		<link name="2019">
+			<link slug="10" name="October" hide="yes">
+				<link slug="04/glorious-mess" name="What A Glorious Mess" hide="yes" />
+				<link slug="08/shapeup" name="Shape Up!" hide="yes" />
+			</link>
+		</link>
+		<link name="2017">
+			<link slug="09" name="September" hide="yes" />
 		</link>
 		<link name="2008">
 			<link slug="05" name="May" hide="yes" />
 			<link slug="06" name="June" hide="yes" />
 			<link slug="12" name="December" hide="yes" />
 		</link>
-		<link name="2017">
-			<link slug="09" name="September" hide="yes" />
-		</link>
-		<link name="2019">
-			<link slug="10" name="October" hide="yes">
-				<link slug="04/glorious-mess" name="What A Glorious Mess" hide="yes" />
-				<link slug="08/shapeup" name="Shape Up!" hide="yes" />
-			</link>
+		<link name="2007">
+			<link slug="08" name="August" hide="yes" />
 		</link>
 	</link>
 	<link slug="who" name="About" />
