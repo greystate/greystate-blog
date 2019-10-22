@@ -7,21 +7,15 @@
 		"uuidString": "1766563F-4F1A-408D-A6A8-C1D39E087D0F"
 		}
 	],
-"creatorBuild": "31491",
+"creatorBuild": "31927",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/.gitignore",
-		"oF": 0
-		},
-	"/build": {
-		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
+		"oAP": "/build/.gitignore",
+		"oF": 1
 		},
 	"/README.md": {
 		"cB": 0,
@@ -49,6 +43,28 @@
 		"oA": 1,
 		"oAP": "/build/reference.html",
 		"oF": 1
+		},
+	"/src/images/github-dev-remote-dark.png": {
+		"ft": 32768,
+		"iS": 33414,
+		"oA": 0,
+		"oAP": "/build/images/github-dev-remote-dark.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 80
+		},
+	"/src/images/github-dev-remote.png": {
+		"ft": 32768,
+		"iS": 33930,
+		"oA": 0,
+		"oAP": "/build/images/github-dev-remote.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 80
 		},
 	"/src/images/greystate_logo.png": {
 		"ft": 32768,
@@ -107,10 +123,10 @@
 		"bl": 1,
 		"eJ": 0,
 		"ft": 1,
-		"ie": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 0,
-		"mS": 0,
+		"mS": 2,
 		"oA": 0,
 		"oAP": "/build/assets/app.css",
 		"oF": 0,
@@ -124,10 +140,10 @@
 		"bl": 1,
 		"eJ": 0,
 		"ft": 1,
-		"ie": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 0,
-		"mS": 0,
+		"mS": 2,
 		"oA": 1,
 		"oAP": "/build/assets/article.css",
 		"oF": 0,
@@ -141,10 +157,10 @@
 		"bl": 1,
 		"eJ": 0,
 		"ft": 1,
-		"ie": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 0,
-		"mS": 0,
+		"mS": 2,
 		"oA": 1,
 		"oAP": "/build/assets/constants.css",
 		"oF": 0,
@@ -158,10 +174,10 @@
 		"bl": 1,
 		"eJ": 0,
 		"ft": 1,
-		"ie": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 0,
-		"mS": 0,
+		"mS": 2,
 		"oA": 1,
 		"oAP": "/build/assets/navbar.css",
 		"oF": 0,
@@ -175,10 +191,10 @@
 		"bl": 1,
 		"eJ": 0,
 		"ft": 1,
-		"ie": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 0,
-		"mS": 0,
+		"mS": 2,
 		"oA": 0,
 		"oAP": "/build/assets/prism-dark.css",
 		"oF": 0,
@@ -192,10 +208,10 @@
 		"bl": 1,
 		"eJ": 0,
 		"ft": 1,
-		"ie": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 0,
-		"mS": 0,
+		"mS": 2,
 		"oA": 0,
 		"oAP": "/build/assets/prism-light.css",
 		"oF": 0,
@@ -337,6 +353,25 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/src/log/2019/10/21/hotfix-with-git/post.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 0,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/log/2019/10/21/hotfix-with-git/post.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/src/log/index.md": {
 		"cB": 0,
 		"cS": 0,
@@ -434,9 +469,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/build/assets/prism.min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 0,
 		"tS": 0
 		}
@@ -469,7 +504,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_magenta",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 593248805.21459901
+	"lastBuiltDate": 593382312.73053503
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -904,6 +939,7 @@
 			"flagValue": -1
 			}
 		},
+	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -1005,6 +1041,10 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1354,6 +1394,10 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
+			"optionString": ""
+			},
+		"no-import-assign": {
+			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -1779,6 +1823,10 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-regex-literals": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -2388,8 +2436,8 @@
 		"autoOutputPathStyle": 1,
 		"createSourceMap": 0,
 		"enableJavascript": 0,
-		"ieCompatibility": 1,
-		"mathStyle": 0,
+		"ieCompatibility": 0,
+		"mathStyle": 2,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 1,
@@ -2550,6 +2598,9 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
+	"rollupExternals": "",
+	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
+	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "_cache,cache,.idea,.log,_logs,logs,node_modules,/storage/framework/sessions,/websiteicons",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
