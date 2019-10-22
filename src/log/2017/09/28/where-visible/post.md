@@ -1,4 +1,5 @@
-# Where Visible???
+Where Visible???
+================
 
 <time datetime="2017-09-28T07:53:00+0200">28 Sep, 2017</time>
 
@@ -29,7 +30,8 @@ Ways in which I think the XSLT version better tells what's going on:
 1. It uses the actual alias of the property that's causing the exclusion, instead of a magic string.
 
 
-## Rewrite
+Rewrite
+-------
 
 OK, turns out both of these can be improved - the XSLT can do without the string conversion and the Razor snippet apparently is using *dynamics* which is no-one's favorite, these days. Or so I'm told :-)
 

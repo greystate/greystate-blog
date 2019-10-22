@@ -1,4 +1,5 @@
-# CSS Variables TextMate Bundle
+CSS Variables TextMate Bundle
+=============================
 
 <time datetime="2008-05-06T02:09:38+0200"> 6 May, 2008</time>
 

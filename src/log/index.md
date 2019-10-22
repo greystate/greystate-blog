@@ -1,4 +1,5 @@
-# Greystate Weblog
+Greystate Weblog
+================
 
 Latest posts:
 

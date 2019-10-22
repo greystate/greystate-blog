@@ -1,4 +1,5 @@
-# Sometimes you need to *Think!*
+Sometimes you need to *Think!*
+==============================
 
 <time datetime="2007-08-17T01:05:32+0200">17 Aug, 2007</time>
 
