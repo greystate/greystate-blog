@@ -71,6 +71,37 @@
 	</xsl:template>
 
 	<!--
+	MultiMarkdown compiles a `<figure>` from an image, but puts the alt text in the `<figcaption>`.
+	
+		<figure>
+		<img src="/path/to/image.png" alt="Alt Text" id="ID" title="Description" />
+		<figcaption>Alt Text</figcaption>
+		</figure>
+
+	We want to output a `<picture>` element with a source for *dark mode* as well.
+	-->
+	<xsl:template match="figure">
+		<xsl:variable name="img-desc" select="img/@title" />
+		<xsl:variable name="img-alt" select="img/@alt" />
+		<xsl:variable name="img-src" select="img/@src" />
+		<xsl:variable name="img-ext" select="substring($img-src, string-length($img-src) - 3)" />
+		<xsl:variable name="img-name" select="substring($img-src, 1, string-length($img-src) - 4)" />
+
+		<xsl:copy>
+			<picture>
+				<source srcset="{concat($img-name, '-dark', $img-ext)}" media="(prefers-color-scheme: dark)" />
+				<img>
+					<xsl:copy-of select="$img-src" />
+					<xsl:copy-of select="$img-alt" />
+				</img>
+			</picture>
+			<xsl:if test="normalize-space($img-desc)">
+				<figcaption><xsl:value-of select="$img-desc" /></figcaption>
+			</xsl:if>
+		</xsl:copy>
+	</xsl:template>
+
+	<!--
 	To make Prism handle the syntax highlighting we need
 	to slightly modify the `class` attribute of `code` elements.
 	-->
