@@ -27,7 +27,7 @@ git remote add LIVE "<URL>"
 ```
 
 This way I can see the environment’s name in the GitHub Desktop client and
-I won’t accidentally push to the live environment 😱.
+I (ideally) won’t accidentally push to the live environment 😱.
 
 ![GitHub Desktop Client showing the remote's name as 'DEV'][screenshot]
 
@@ -40,9 +40,11 @@ Hotfixing
 So, back to my problem...
 
 The [Umbraco Documentation][UMBDOCS] actually has some very detailed information about this,
-and a couple of examples of how to go about it.
+and a couple of examples of how to go about it. If you're using [GitKraken][KRAKEN] or a similar
+client, you may just have a look at those first. I happen to use the GitHub Desktop client and
+a fair share of command line git, so I went about my own way to solve this.
 
-  [UMBDOCS]: https://
-
+  [UMBDOCS]: https://our.umbraco.com/documentation/Umbraco-Cloud/Deployment/Hotfixes/Using-Git/
+  [KRAKEN]: https://www.gitkraken.com
 
 <data data-slug="hotfix-with-git"></data>
