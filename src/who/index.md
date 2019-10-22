@@ -1,12 +1,14 @@
 <data data-slug="who"></data>
 
-# About me
+About me
+========
 
 I'm a frontend developer from Denmark doing mostly content sites with [Umbraco CMS][UMB].
 
 I'm co-owner of [Vokseværk][VV], a design and development bureau in Aarhus, Denmark.
 
-## Experience
+Experience
+----------
 
 Over the years I've had the pleasure of working with a bunch of different technologies,
 including (in no particular order):

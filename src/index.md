@@ -1,7 +1,9 @@
-# Greystate Web
+Greystate Web
+=============
 
 What's up?
 
-## Anything new?
+Anything new?
+-------------
 
 <data data-slug="/"></data>
