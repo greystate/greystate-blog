@@ -12,16 +12,25 @@ article {
 		&, code[class*="language-"] { font-size: 0.8rem; }
 	}
 	
+	code:not([class]) {
+		background: rgba(255, 0, 0, 0.8);
+		padding-right: 0.2em;
+		padding-left: 0.2em;
+	}
+	
 	figure {
 		border: 2px solid rgba(0, 0, 0, 0.3);
 		border-bottom: 0;
+		
+		// Hmmm... a bit suspicious, but looks better.
+		img { width: 100%; }
 	}
 	
 	figcaption {
+		max-width: 100%;
 		text-align: center;
 		font-size: 0.9rem;
-		padding-top: 0.1em;
-		padding-bottom: 0.1em;
+		padding: 0.1em 1em;
 		background: rgba(0, 0, 0, 0.3);
 	}
 	
