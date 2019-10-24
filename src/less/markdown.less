@@ -1,0 +1,72 @@
+* {
+	font-size: large;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.4;
+	margin: 0;
+	color: inherit;
+}
+
+body {
+	padding: 2em;
+	background: #ccc;
+	color: #333;
+	font-family: "Courier Prime", "Andale Mono", Monaco, "Courier New", Courier, monospace;
+	
+	* + * {
+		margin-top: 1.2em;
+	}
+}
+
+h1, h2 {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding-bottom: 1em;
+	
+	&::after {
+		position: absolute;
+		content: "========================================================================";
+		display: block;
+		max-width: 100%;
+		white-space: pre;
+		overflow: hidden;
+	}
+}
+
+h2::after {
+	content: "------------------------------------------------------------------------";
+}
+
+h3, h4, h5, h6 {
+	&::before { margin-right: 1ch; }
+}
+
+h3::before { content: "###"; }
+h4::before { content: "####"; }
+h5::before { content: "#####"; }
+h6::before { content: "######"; }
+
+em {
+	&::before, &::after { content: "*"; }
+}
+
+strong {
+	&::before, &::after { content: "**"; }
+}
+
+a[href] {
+	text-decoration: none;
+	
+	&::before { content: "["; }
+	&::after { content: '](' attr(href) ')'; }
+	
+	&[title] {
+		&::after { content: '](' attr(href) ' "' attr(title) '")'; }
+	}
+	
+	&:hover, &:focus {
+		background: yellow;
+	}
+}
+
