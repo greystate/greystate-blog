@@ -4,18 +4,20 @@
 	font-style: normal;
 	line-height: 1.4;
 	margin: 0;
-	color: inherit;
+}
+
+:root {
+	color-scheme: light dark;
 }
 
 body {
 	padding: 2em;
-	background: #ccc;
-	color: #333;
 	font-family: "Courier Prime", "Andale Mono", Monaco, "Courier New", Courier, monospace;
 	
 	* + * {
 		margin-top: 1.2em;
 	}
+	
 }
 
 h1, h2 {
@@ -48,15 +50,16 @@ h5::before { content: "#####"; }
 h6::before { content: "######"; }
 
 em {
+	font-style: italic;
 	&::before, &::after { content: "*"; }
 }
 
 strong {
+	font-weight: bold;
 	&::before, &::after { content: "**"; }
 }
 
 a[href] {
-	text-decoration: none;
 	
 	&::before { content: "["; }
 	&::after { content: '](' attr(href) ')'; }
