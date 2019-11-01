@@ -23,6 +23,14 @@
 		"oAP": "/build/build",
 		"oF": 0
 		},
+	"/DEPLOY.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/DEPLOY.sh",
+		"oF": 1
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -414,6 +422,25 @@
 		"oA": 0,
 		"oAP": "/build/mdtest.html",
 		"oF": 0
+		},
+	"/src/resources/index.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 0,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/resources/index.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/src/who/index.md": {
 		"cB": 0,
