@@ -3,9 +3,7 @@
 About me
 ========
 
-I'm a frontend developer from Denmark doing mostly content sites with [Umbraco CMS][UMB].
-
-I'm co-owner of [Vokseværk][VV], a design and development bureau in Aarhus, Denmark.
+I'm a frontend developer from Denmark doing mostly content sites with [Umbraco CMS][UMB]. I'm also a co-owner of [Vokseværk][VV], a design and development bureau in Aarhus, Denmark.
 
 Experience
 ----------

@@ -58,6 +58,10 @@ body {
 	background-blend-mode: multiply;
 }
 
+a:not([class]) {
+	color: #a3c493;
+}
+
 @supports(--property: "value") {
 
 	body {
@@ -104,6 +108,20 @@ h2 {
 		padding-left: 0;
 	}
 	
+}
+
+/* Set colors for links in light mode */
+@media (prefers-color-scheme: light) {
+	a:not([class]):link { color: #c22; }
+	a:not([class]):visited { color: #c22; }
+	a:not([class]):active { color: #c22; }
+}
+
+/* Set colors for links in dark mode */
+@media (prefers-color-scheme: dark) {
+	a:not([class]):link { color: #f84; }
+	a:not([class]):visited { color: #f84; }
+	a:not([class]):active { color: #f84; }
 }
 
 @import "article";

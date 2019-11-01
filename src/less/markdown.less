@@ -8,17 +8,38 @@
 
 :root {
 	color-scheme: light dark;
+	--bgcolor: #ffd;
+	--fgcolor: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bgcolor: #020;
+		--fgcolor: #ccc;
+	}
 }
 
 body {
+	// Fallbackery
+	background: #ffd;
+	color: #222;
+	
+	// Variably
+	background: var(--bgcolor, #ffd);
+	color: var(--fgcolor, #222);
+
 	padding: 2em;
-	font-family: "Courier Prime", "Andale Mono", Monaco, "Courier New", Courier, monospace;
+	font-family: "Courier Prime", "Courier New", Courier, monospace;
+	max-width: 75ch;
 	
 	* + * {
 		margin-top: 1.2em;
 	}
 	
 }
+
+// Headers
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 
 h1, h2 {
 	position: relative;
@@ -49,6 +70,7 @@ h4::before { content: "####"; }
 h5::before { content: "#####"; }
 h6::before { content: "######"; }
 
+// Misc. flow elements
 em {
 	font-style: italic;
 	&::before, &::after { content: "*"; }
@@ -59,7 +81,14 @@ strong {
 	&::before, &::after { content: "**"; }
 }
 
+code {
+	&::before, &::after { content: "`"; }
+}
+
+// Links
 a[href] {
+	
+	color: inherit;
 	
 	&::before { content: "["; }
 	&::after { content: '](' attr(href) ')'; }
@@ -69,7 +98,13 @@ a[href] {
 	}
 	
 	&:hover, &:focus {
-		background: yellow;
+		background: #aa1;
 	}
 }
 
+// Images
+// Can't really do much to them. Let's add a background while loading.
+img {
+	background: linear-gradient(35deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1));
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
