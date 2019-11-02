@@ -124,6 +124,7 @@
 		<xsl:variable name="year" select="substring($dateval, 1, 4)" />
 		<xsl:variable name="month" select="substring($dateval, 6, 2)" />
 		<xsl:variable name="date" select="substring($dateval, 9, 2)" />
+
 		<abbr class="date" title="{@datetime}">
 			<a rel="bookmark" href="{$blog-url}{$year}/{$month}/{$date}/{$slug}/">
 				<time>
