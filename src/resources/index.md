@@ -13,7 +13,6 @@ and to be able to grab the stubbed-out code as a start.
 
 [OBJRDX]: /resources/objredux/
 
-* * *
 
 Maximum Request Length Calculator [link][MAXLEN]
 ---------------------------------
@@ -24,7 +23,6 @@ need to allow a certain size for uploads.
 
 [MAXLEN]: /resources/umbraco/maxrequestlength/
 
-* * *
 
 Umbraco Razor Quick Reference [link][RAZREF]
 -----------------------------
@@ -33,7 +31,6 @@ My own format for quick reference of Razor as used in Umbraco.
 
 [RAZREF]: /resources/umbraco/razor-reference/
 
-* * *
 
 Subtree Merge [link][SUBMERGE]
 -------------
