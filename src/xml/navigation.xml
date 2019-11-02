@@ -13,12 +13,20 @@
 			<link slug="09" name="September" hide="yes" />
 		</link>
 		<link name="2008">
-			<link slug="05" name="May" hide="yes" />
-			<link slug="06" name="June" hide="yes" />
-			<link slug="12" name="December" hide="yes" />
+			<link slug="05" name="May" hide="yes">
+				<link slug="06/css-variables-bundle" name="CSS Variables TextMate Bundle" hide="yes" />
+			</link>
+			<link slug="06" name="June" hide="yes">
+				<link slug="16/ten-years-ago" name="Ten Years Ago, Today" hide="yes" />
+			</link>
+			<link slug="12" name="December" hide="yes">
+				<link slug="18/regex-2008" name="Regex, The (2008)" hide="yes" />
+			</link>
 		</link>
 		<link name="2007">
-			<link slug="08" name="August" hide="yes" />
+			<link slug="08" name="August" hide="yes">
+				<link slug="17/think" name="Sometimes you need to Think!" hide="yes" />
+			</link>
 		</link>
 	</link>
 	<link slug="who" name="About" />
