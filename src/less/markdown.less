@@ -41,7 +41,7 @@ body {
 // Headers
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 
-h1, h2 {
+h1 {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
@@ -57,14 +57,11 @@ h1, h2 {
 	}
 }
 
-h2::after {
-	content: "------------------------------------------------------------------------";
-}
-
-h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	&::before { margin-right: 1ch; }
 }
 
+h2::before { content: "##"; }
 h3::before { content: "###"; }
 h4::before { content: "####"; }
 h5::before { content: "#####"; }
