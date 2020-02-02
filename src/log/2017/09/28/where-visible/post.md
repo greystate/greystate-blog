@@ -27,7 +27,7 @@ var selection = CurrentPage.Children.Where("Visible");
 
 Ways in which I think the XSLT version better tells what's going on:
 
-1. It uses the actual alias of the property that's causing the exclusion, instead of a magic string.
+1. *It uses the actual alias of the property that's causing the exclusion, instead of a magic string.*
 
 
 Rewrite
