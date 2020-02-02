@@ -29,8 +29,25 @@ My own format for quick reference of Razor as used in Umbraco.
 [RAZREF]: /resources/umbraco/razor-reference/
 
 
-[Subtree Merge][SUBMERGE]
--------------------------
+## [MixedIn][MIXS]
+
+A `.less` file with a set of mixins I seem to be using on most
+projects, so found a way to have it readily available, and where
+I can at least do some pseudo-versioning.
+
+[MIXS]: /mixedin/mixins.html
+
+
+## [Helpers][HELPS]
+
+Very much akin to the above mentioned mixins, this is a JavaScript file
+that I also wanted to keep handy and available - think jQuery
+but 100× smaller (if not 1,000×).
+
+[HELPS]: /helpers/helpers.html
+
+
+## [Subtree Merge][SUBMERGE]
 
 This tool comes in handy when you need to pull part of one Git
 repository into another.
