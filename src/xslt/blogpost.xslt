@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE xsl:stylesheet [
+	<!ENTITY upper "ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+	<!ENTITY lower "abcdefghijklmnopqrstuvwxyz">
+]>
 <!--
 	blogpost.xslt
 	
@@ -133,6 +137,15 @@
 				</time>
 			</a>
 		</abbr>
+	</xsl:template>
+	
+	<xsl:template match="h1 | h2 | h3 | h4 | h5 | h6">
+		<xsl:copy>
+			<xsl:attribute name="id">
+				<xsl:value-of select="translate(., ' &upper;', '-&lower;')" />
+			</xsl:attribute>
+			<xsl:apply-templates />
+		</xsl:copy>
 	</xsl:template>
 	
 	<!-- Open external links in a new window -->
