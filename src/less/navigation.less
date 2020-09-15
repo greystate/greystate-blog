@@ -1,0 +1,24 @@
+.navbar {
+	.cluster(10px);
+	
+	.links {
+		ul { display: none; }
+		
+		a {
+			padding: 0.3em 0.8em;
+			display: inline-block;
+			background: #000;
+			color: #fff;
+			
+			&:focus + ul,
+			+ ul:focus-within {
+				display: block;
+				position: absolute;
+			}
+			
+			&[aria-current] {
+				box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+}
