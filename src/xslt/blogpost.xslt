@@ -47,7 +47,7 @@
 		<xsl:copy>
 			<link rel="stylesheet" href="/assets/prism-light.css" media="(prefers-color-scheme: light)" />
 			<link rel="stylesheet" href="/assets/prism-dark.css" media="(prefers-color-scheme: dark)" />
-			<link rel="stylesheet" href="/assets/app.css" />
+			<link rel="stylesheet" href="/assets/greystate.css" />
 
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			<title><xsl:value-of select="../body/h1[1]" /> — Greystate Blog</title>
