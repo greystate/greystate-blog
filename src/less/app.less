@@ -51,11 +51,11 @@ body {
 	color: @text_color_light;
 	color: var(--fgcolor);
 	
-	background-image: url(/images/greystate_logo.png);
-	background-size: 20vw;
-	background-repeat: no-repeat;
-	background-position: 1rem 6rem;
-	background-blend-mode: multiply;
+//	background-image: url(/images/greystate_logo.png);
+//	background-size: 20vw;
+//	background-repeat: no-repeat;
+//	background-position: 1rem 6rem;
+//	background-blend-mode: multiply;
 }
 
 a:not([class]) {
@@ -65,15 +65,15 @@ a:not([class]) {
 @supports(--property: "value") {
 
 	body {
-		background-image:
-			url(/images/greystate_logo.png),
-			linear-gradient(var(--bgnav, rgba(0, 0, 200, 0.1)), var(--bgnav, rgba(0, 0, 200, 0.1)));
-		background-size:
-			20vw auto,
-			23vw 32px;
-		background-repeat: no-repeat, repeat-y;
-		background-position: 1rem 6rem, left center;
-		background-blend-mode: multiply, normal;
+//		background-image:
+//			url(/images/greystate_logo.png),
+//			linear-gradient(var(--bgnav, rgba(0, 0, 200, 0.1)), var(--bgnav, rgba(0, 0, 200, 0.1)));
+//		background-size:
+//			20vw auto,
+//			23vw 32px;
+//		background-repeat: no-repeat, repeat-y;
+//		background-position: 1rem 6rem, left center;
+//		background-blend-mode: multiply, normal;
 	}
 
 } // @supports
@@ -103,9 +103,12 @@ h2 {
 @supports (display: grid) {
 
 	body when (@enable_grid = true) {
-		// Remove the safety padding
-		padding-right: 0;
-		padding-left: 0;
+		@media only screen and (min-width: 800px) {
+			// Remove the safety padding
+			padding-right: 0;
+			padding-left: 0;
+		}
+		
 	}
 	
 }

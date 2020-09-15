@@ -1,10 +1,8 @@
 Greystate Weblog
 ================
 
-Latest posts:
+Latest post:
 
-- [Hotfixing on Umbraco Cloud with Git](/log/2019/10/21/hotfix-with-git/)
-- [Shape Up!](/log/2019/10/08/shapeup/)
-- [What a Glorious Mess](/log/2019/10/04/glorious-mess/)
+- [Trying Out the .NET Core Umbraco Alpha Release](/log/2020/09/04/umbraco-net-core-alpha/)
 
 <data data-slug="log"></data>

@@ -3,6 +3,11 @@
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
 	<link slug="log" name="Blog" subclass="archives">
+		<link name="2020">
+			<link slug="09" name="September" hide="yes">
+				<link slug="04/umbraco-net-core-alpha" name="Trying Out the Umbraco .NET Core Alpha Release" hide="yes" />
+			</link>
+		</link>
 		<link name="2019">
 			<link slug="10" name="October" hide="yes">
 				<link slug="21/hotfix-with-git" name="Hotfixing on Umbraco Cloud wth Git" hide="yes" />
