@@ -91,6 +91,12 @@ article {
 		}
 	}
 	
+	> hr {
+		border: 1px dashed rgba(0, 0, 0, 0.3);
+		border-color: var(--hr-color);
+		width: 25%;
+	}
+	
 	// This is for when Prism hasn't kicked in (i.e. probably no JS)
 	pre:not([class]) {
 		background: rgba(0, 0, 0, 0.5);
@@ -100,27 +106,3 @@ article {
 		color: var(--codecolor);
 	}
 }
-
-@supports(display: grid) {
-
-	article when (@enable_grid = true) {
-		@media only screen and (min-width: 800px) {
-			max-width: unset;
-		
-			display: grid;
-			grid-template-columns: 3fr [wide-start] 1fr [code-start] 2fr [content-start] 1fr 2fr 3fr 2fr 1fr 3fr [content-end] 2fr [wide-end code-end] 3fr;
-
-			> * { grid-column: content; }
-			> p { max-width: 75ch; }
-			> pre[class*=language-] { grid-column: code; }
-			> blockquote { grid-column: 4 / 9; }
-	
-			> hr {
-				border: 1px dashed rgba(0, 0, 0, 0.3);
-				width: 25%;
-			}
-		}
-	}
-	
-
-} // @supports

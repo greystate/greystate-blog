@@ -1,12 +1,56 @@
 
-@enable_grid: true;
+@enable_grid: false;
 
 @bg_color_light:        #ddd;
 @text_color_light:      #444;
 @code_color_light:      #000;
 @bg_color_navbar_light: rgba(0, 0, 200, 0.1);
+@hr_color_light:        rgba(0, 0, 0, 0.3);
 
-@bg_color_dark:        #333;
-@text_color_dark:      #ccc;
-@code_color_dark:      #999;
-@bg_color_navbar_dark: rgba(255, 255, 255, 0.1);
+@bg_color_dark:         #333;
+@text_color_dark:       #ccc;
+@code_color_dark:       #999;
+@bg_color_navbar_dark:  rgba(255, 255, 255, 0.1);
+@hr_color_dark:         rgba(255, 250, 250, 0.3);
+
+
+@supports(--property: "value") {
+	:root {
+	     --bgcolor-light: @bg_color_light;
+	     --fgcolor-light: @text_color_light;
+	  --code-color-light: @code_color_light;
+	  --bgcolornav-light: @bg_color_navbar_light;
+	    --hr-color-light: @hr_color_light;
+
+	      --bgcolor-dark: @bg_color_dark;
+	      --fgcolor-dark: @text_color_dark;
+	   --code-color-dark: @code_color_dark;
+	   --bgcolornav-dark: @bg_color_navbar_dark;
+	     --hr-color-dark: @hr_color_dark;
+
+	           --bgcolor: var(--bgcolor-light);
+	           --fgcolor: var(--fgcolor-light);
+	         --codecolor: var(--code-color-light);
+	             --bgnav: var(--bgcolornav-light);
+	          --hr-color: var(--hr-color-light);
+	}
+} // @supports
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		  --bgcolor: var(--bgcolor-dark);
+		  --fgcolor: var(--fgcolor-dark);
+		--codecolor: var(--codecolor-dark);
+		    --bgnav: var(--bgcolornav-dark);
+		 --hr-color: var(--hr-color-dark);
+	}
+	
+	article h1 { color: var(--fgcolor-dark); }
+	pre:not([class]) { color: var(--code-color-dark); }
+}
+
+:root {
+	font-size: 120%;
+
+	color-scheme: light dark;
+}
