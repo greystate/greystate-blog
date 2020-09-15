@@ -42,35 +42,37 @@
 	Generate the `head` tag
 	Handles getting the title of the post, to put in ... the <title> tag!
 	Also adds the CSS files (main + Prism)
+	Plus the Prism JS file (w/defer)
 	-->
 	<xsl:template match="head">
 		<xsl:copy>
+			<link rel="stylesheet" href="/assets/greystate.css" />
 			<link rel="stylesheet" href="/assets/prism-light.css" media="(prefers-color-scheme: light)" />
 			<link rel="stylesheet" href="/assets/prism-dark.css" media="(prefers-color-scheme: dark)" />
-			<link rel="stylesheet" href="/assets/greystate.css" />
 
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			<title><xsl:value-of select="../body/h1[1]" /> — Greystate Blog</title>
 			
+			<script src="/assets/prism.min.js" defer="defer"></script>
+			
 			<xsl:apply-templates />
+			
 		</xsl:copy>
 	</xsl:template>
 	
 	<!--
 	The body template wraps the post content in an `article` element and adds the navbar.
-	Also adds the Prism JS file.
 	-->
 	<xsl:template match="body">
 		<xsl:copy>
+			<xsl:call-template name="RenderNavigation" />
+			
 			<article>
 				
 				<xsl:apply-templates />
 				
 			</article>
 			
-			<xsl:call-template name="RenderNavigation" />
-			
-			<script src="/assets/prism.min.js"></script>
 		</xsl:copy>
 	</xsl:template>
 
