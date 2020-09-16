@@ -1,0 +1,36 @@
+@supports(display: grid) {
+
+	article when (@enable_grid = true) {
+		
+		margin: 0;
+		max-width: none;
+		
+		display: grid;
+		
+		grid-template-columns:
+			[full-start]
+				minmax(auto, 1fr)
+				[header-start]
+					1fr
+					[code-start]
+					1fr
+					[content-start] minmax(auto, 75ch) [content-end code-end]
+					3fr
+				[header-end]
+				minmax(auto, 1fr)
+			[full-end];
+		
+		// Default to the `content` column
+		> * { grid-column: content; }
+		
+		> h1, > .date {
+			grid-column: header;
+		}
+		
+		> [class*="language-"] {
+			grid-column: code;
+		}
+	}
+	
+
+} // @supports
