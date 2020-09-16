@@ -31,8 +31,7 @@ I (ideally) won’t accidentally push to the live environment 😱.
 
 ![GitHub Desktop Client showing the remote's name as 'DEV'][screenshot]
 
-  [screenshot]: /images/github-dev-remote.png
-  "The GitHub Desktop Client shows the remote's name on the 'Pull' button"
+[screenshot]: /images/github-dev-remote.png "The GitHub Desktop Client shows the remote's name on the 'Pull' button"
 
 Hotfixing
 ---------

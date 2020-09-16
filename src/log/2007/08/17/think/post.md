@@ -20,4 +20,4 @@ and it will no longer work in macOS Catalina for sure, because of the switch to 
 
   [THINK2]: https://download.cnet.com/Think/3001-2072_4-139813.html
 
-<data slug="think"></data>
+<data data-slug="think"></data>

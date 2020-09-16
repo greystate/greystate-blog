@@ -3,7 +3,7 @@ Trying Out the .NET Core Umbraco Alpha Release
 
 <time data-slug="umbraco-net-core-alpha" datetime="2020-09-04T22:11:11+0200"> 4 Sep, 2020</time>
 
-Many times since I started using Umbraco (~11 years ago), I've been in situations where it'd have been nice (read: not so risky) to be able to run a local development version of an Umbraco website. But it's never been possible on a Mac, unless you were using a VM or something similar. So I've had a Windows laptop on hand for these occasions.
+Many times since I started using Umbraco (some 11 years ago), I've been in situations where it'd have been nice (read: not so risky) to be able to run a local development version of an Umbraco website. But it's never been possible on a Mac, unless you were using a VM or something similar. So I've had a Windows laptop on hand for these occasions.
 
 So when I learned that now there was an alpha version available that people had apparently been able to run natively on macOS I was all "where do I sign my name and get a copy of it?"
 
