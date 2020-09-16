@@ -24,6 +24,8 @@
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
 	<xsl:variable name="data" select="//body//data[@data-slug]" />
 	
+	<xsl:variable name="content-id" select="'content'" />
+	
 	<!--
 	Identity transform
 	Copies elements, attributes and text verbatim, but leaves
@@ -67,7 +69,7 @@
 		<xsl:copy>
 			<xsl:call-template name="RenderNavigation" />
 			
-			<article>
+			<article id="{$content-id}">
 				
 				<xsl:apply-templates />
 				
@@ -166,6 +168,7 @@
 	Render some navigation for the site.
 	-->
 	<xsl:template name="RenderNavigation">
+		<a class="skipper" href="#{$content-id}">Skip to content</a>
 		<nav class="navbar">
 			<xsl:apply-templates select="document('../xml/navigation.xml')/navigation">
 				<xsl:with-param name="currentPage" select="$data/@data-slug" />
