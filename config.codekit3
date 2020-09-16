@@ -17,6 +17,14 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
+	"/.nova/Configuration.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/build/.nova/Configuration-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/build": {
 		"ft": 65536,
 		"oA": 1,
@@ -206,6 +214,22 @@
 		"mS": 2,
 		"oA": 0,
 		"oAP": "/build/assets/greystate.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/src/less/layout.less": {
+		"aP": 1,
+		"bl": 1,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 2,
+		"oA": 1,
+		"oAP": "/build/assets/layout.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -646,7 +670,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_magenta",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 621963927.658777
+	"lastBuiltDate": 621965731.95234895
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
