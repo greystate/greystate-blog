@@ -12,7 +12,21 @@ body {
 	color: var(--fgcolor);
 }
 
-a:not([class]) {
-	color: #a3c493;
+a {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
 }
 
+/* Set colors for links in light mode */
+@media (prefers-color-scheme: light) {
+	a:not([class]):link,
+	a:not([class]):visited,
+	a:not([class]):active { color: var(--link-color-light); }
+}
+
+/* Set colors for links in dark mode */
+@media (prefers-color-scheme: dark) {
+	a:not([class]):link,
+	a:not([class]):visited,
+	a:not([class]):active { color: var(--link-color-dark); }
+}
