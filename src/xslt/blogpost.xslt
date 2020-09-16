@@ -13,13 +13,14 @@
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	exclude-result-prefixes="xhtml"
 >
 
 	<xsl:output method="html"
 		indent="yes" omit-xml-declaration="yes"
 		doctype-system="about:legacy-compat"
 	/>
-
 
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
 	<xsl:variable name="data" select="//body//data[@data-slug]" />
@@ -38,7 +39,12 @@
 		</xsl:copy>
 	</xsl:template>
 	
-	<!-- :: 	Specific templates :: -->
+	<!-- :: Specific templates :: -->
+	<xsl:template match="html">
+		<html>
+			<xsl:apply-templates />
+		</html>
+	</xsl:template>
 	
 	<!--
 	Generate the `head` tag
@@ -163,6 +169,8 @@
 	<xsl:template match="p[not(normalize-space())]">
 		<!-- Strip empty <p>s (or <p>s with all empty elements inside) -->
 	</xsl:template>
+	
+	<xsl:template match="meta[@charset]"></xsl:template>
 	
 	<!--
 	Render some navigation for the site.
