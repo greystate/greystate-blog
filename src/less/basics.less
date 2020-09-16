@@ -17,16 +17,33 @@ a {
 	text-underline-offset: 3px;
 }
 
+:focus {
+	outline: 2px dashed @link_color_light;
+	outline-offset: 0.4em;
+}
+
 /* Set colors for links in light mode */
 @media (prefers-color-scheme: light) {
 	a:not([class]):link,
 	a:not([class]):visited,
-	a:not([class]):active { color: var(--link-color-light); }
+	a:not([class]):active {
+		color: var(--link-color-light);
+	}
+	
+	:focus {
+		outline-color: var(--link-color-light);
+	}
 }
 
 /* Set colors for links in dark mode */
 @media (prefers-color-scheme: dark) {
 	a:not([class]):link,
 	a:not([class]):visited,
-	a:not([class]):active { color: var(--link-color-dark); }
+	a:not([class]):active {
+		color: var(--link-color-dark);
+	}
+	
+	:focus {
+		outline-color: var(--link-color-dark);
+	}
 }
