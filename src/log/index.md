@@ -1,8 +1,17 @@
 Greystate Weblog
 ================
 
-Latest post:
+Latest post(s):
 
-- [Trying Out the .NET Core Umbraco Alpha Release](/log/2020/09/04/umbraco-net-core-alpha/)
+2020
+----
+
+- Sep 4: [Trying Out the .NET Core Umbraco Alpha Release](/log/2020/09/04/umbraco-net-core-alpha/)
+
+2019
+----
+
+- Oct 21: [Hotfixing on Umbraco Cloud with Git](/log/2019/10/21/hotfix-with-git)
+- Oct 4: [What a Glorious Mess](/log/2019/10/04/glorious-mess/)
 
 <data data-slug="log"></data>
