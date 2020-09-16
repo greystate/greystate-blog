@@ -131,10 +131,9 @@
 		<xsl:variable name="month" select="substring($dateval, 6, 2)" />
 		<xsl:variable name="date" select="substring($dateval, 9, 2)" />
 
-		<abbr class="date" title="{@datetime}">
+		<abbr class="date" title="{$dateval}">
 			<a rel="bookmark" href="{$blog-url}{$year}/{$month}/{$date}/{$slug}/">
-				<time>
-					<xsl:copy-of select="time/@datetime" />
+				<time datetime="{$dateval}">
 					<xsl:value-of select="normalize-space(time)" />
 				</time>
 			</a>
