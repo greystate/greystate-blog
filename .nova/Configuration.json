@@ -1,0 +1,7 @@
+{
+  "workspace.color" : 3,
+  "workspace.name" : "Greystate Blog",
+  "workspace.preview_append_paths" : true,
+  "workspace.preview_root" : "build",
+  "workspace.preview_server_allow_external" : false
+}
