@@ -4,12 +4,12 @@
 	padding: 1em;
 	text-align: center;
 	position: fixed;
-	top: 20px;
-	left: 20px;
+	top: 0;
+	left: 0;
 	background: #000;
 	color: #fff;
 	
-	&:focus { outline-offset: 0; }
+	&:focus { outline: none; }
 	&:not(:focus):not(:active) { .visuallyHidden(); }
 }
 
@@ -22,17 +22,30 @@
 		a {
 			padding: 0.3em 0.8em;
 			display: inline-block;
-			background: #000;
-			color: #fff;
+			text-decoration: none;
+			
+			color: var(--fgcolor);
+			font-weight: bold;
+			
+			&:focus {
+				outline: none;
+				background: var(--fgcolor);
+				color: var(--bgcolor);
+			}
 			
 			&:focus + ul,
 			+ ul:focus-within {
 				display: block;
 				position: absolute;
+				background: var(--fgcolor);
+				
+				a {
+					color: var(--bgcolor);
+				}
 			}
 			
 			&[aria-current] {
-				box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+				text-decoration: underline;
 			}
 		}
 	}
