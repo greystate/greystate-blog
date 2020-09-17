@@ -36,6 +36,10 @@
 					<xsl:apply-templates select="$ancestors" mode="url" />
 				</xsl:attribute>
 				
+				<xsl:if test="count($ancestors) &gt; 1">
+					<xsl:attribute name="tabindex">-1</xsl:attribute>
+				</xsl:if>
+				
 				<!--
 				If there's a complete URL is specified,
 				use that instead and open in a new window
