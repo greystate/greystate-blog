@@ -35,7 +35,17 @@ I finally found Umbraco in circa 2009 and haven't looked away since.
 
 What's rendered by Umbraco is of my own doing - not someone else's.
 
+Current toolset
+---------------
+
+These days, I'm using [Panic][PANIC]'s brand new [Nova][NOVA] code editor, which
+I like quite a lot.
+
+
 
 [UMB]: https://umbraco.com
 [VV]: https://vokseverk.dk
 [PLURALIZE]: https://painintheenglish.com/case/333
+[PANIC]: https://panic.com
+[NOVA]: https://nova.app
+
