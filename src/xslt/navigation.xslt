@@ -54,7 +54,7 @@
 					<xsl:attribute name="aria-current">page</xsl:attribute>
 				</xsl:if>
 				
-				<xsl:if test="descendant::link[@slug = $currentPage]">
+				<xsl:if test="descendant::link[(@slug = $currentPage) or (substring-after(@slug, '/') = $currentPage)]">
 					<xsl:attribute name="aria-current">location</xsl:attribute>
 				</xsl:if>
 				<xsl:value-of select="$title" />
