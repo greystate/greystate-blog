@@ -31,7 +31,7 @@ The actual steps I followed were these:
 	```
 3. Install the Umbraco dotnet template
 	```bash
-	running dotnet new -i Umbraco.Templates::0.5.0-alpha001
+	dotnet new -i Umbraco.Templates::0.5.0-alpha001
 	```
 4. Created a new empty solution
 	```bash
