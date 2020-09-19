@@ -68,8 +68,14 @@
 	</xsl:template>
 	
 	<xsl:template match="link[@slug = '/']">
+		<xsl:param name="currentPage" />
 		<li>
-			<a href="/"><xsl:value-of select="@name" /></a>
+			<a href="/">
+				<xsl:if test="@slug = $currentPage">
+					<xsl:attribute name="aria-current">page</xsl:attribute>
+				</xsl:if>
+				<xsl:value-of select="@name" />
+			</a>
 		</li>
 	</xsl:template>
 	
