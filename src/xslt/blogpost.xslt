@@ -41,7 +41,7 @@
 	
 	<!-- :: Specific templates :: -->
 	<xsl:template match="html">
-		<html>
+		<html lang="en">
 			<xsl:apply-templates />
 		</html>
 	</xsl:template>
