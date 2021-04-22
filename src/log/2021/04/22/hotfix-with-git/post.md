@@ -1,7 +1,7 @@
 Hotfixing on Umbraco Cloud with Git
 ===================================
 
-<time datetime="2021-04-22T18:59:00+0200">22 Apr, 2021</time>
+<time data-slug="hotfix-with-git" datetime="2021-04-22T18:59:00+0200">22 Apr, 2021</time>
 
 Today I needed to fix something on the production site though
 the development site wasn’t in a deployable state. What to do?
@@ -100,6 +100,3 @@ So, in short:
 - Create `hotfix` branch
 - Cherry pick the commit(s)
 - Push to `LIVE hotfix:master`
-
-
-<data data-slug="hotfix-with-git"></data>

@@ -1,7 +1,7 @@
 Regex, The (2008)
 =================
 
-<time datetime="2008-12-18T22:43:05+0100">18 Dec, 2008</time>
+<time data-slug="regex-2008" datetime="2008-12-18T22:43:05+0100">18 Dec, 2008</time>
 	
 So I have this list of movies I've seen - it's a plain text file accumulated from roughly the
 steps outlined here - let's say I just saw the movie "Cloverfield" on DVD...
@@ -52,5 +52,3 @@ hammered this in:
 
   [screenshot]: /images/Regex-The-2008.png
   "Regular Expression: `^(.*)(,) (The)( \(\d{4}\))\s*$` - Replacement: `$3 $1$4`"
-
-<data data-slug="regex-2008"></data>

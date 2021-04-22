@@ -130,10 +130,16 @@
 	This renders the current format of the post's publish-date.
 	The markdown contains a `time` element with an additional data attribute
 	holding the post's slug for use in the bookmark link.
+	Some posts have a separate `<data data-slug="" />` element instead.
 	-->
 	<xsl:template match="body/p[time]">
 		<xsl:variable name="dateval" select="time/@datetime" />
-		<xsl:variable name="slug" select="$data/@data-slug" />
+		<xsl:variable name="slug">
+			<xsl:value-of select="time/@data-slug" />
+			<xsl:if test="not(time/@data-slug)">
+				<xsl:value-of select="$data/@data-slug" />
+			</xsl:if>
+		</xsl:variable>
 		
 		<xsl:variable name="year" select="substring($dateval, 1, 4)" />
 		<xsl:variable name="month" select="substring($dateval, 6, 2)" />
