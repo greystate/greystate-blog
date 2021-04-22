@@ -3,6 +3,11 @@ Greystate Weblog
 
 Latest post(s):
 
+2021
+----
+
+- Apr 22: [Hotfixing on Umbraco Cloud with Git](/log/2021/04/22/hotfix-with-git/)
+
 2020
 ----
 
@@ -11,7 +16,6 @@ Latest post(s):
 2019
 ----
 
-- Oct 21: [Hotfixing on Umbraco Cloud with Git](/log/2019/10/21/hotfix-with-git)
 - Oct 4: [What a Glorious Mess](/log/2019/10/04/glorious-mess/)
 
 <data data-slug="log"></data>
