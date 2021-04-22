@@ -154,6 +154,9 @@
 		</abbr>
 	</xsl:template>
 	
+	<!--
+	Add linkable ids to header tags (lowercased with dashed instead of spaces).
+	-->
 	<xsl:template match="h1 | h2 | h3 | h4 | h5 | h6">
 		<xsl:copy>
 			<xsl:attribute name="id">
