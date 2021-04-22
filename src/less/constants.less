@@ -2,6 +2,7 @@
 @enable_grid: true;
 
 @bg_color_light:        #ddd;
+@bg_color_light_trans:  rgba(#ddd, 0);
 @text_color_light:      #444;
 @code_color_light:      #000;
 @bg_color_navbar_light: rgba(@bg_color_light, 0.8);
@@ -9,6 +10,7 @@
 @link_color_light:      #c22;
 
 @bg_color_dark:         #333;
+@bg_color_dark_trans:   rgba(#333, 0);
 @text_color_dark:       #ccc;
 @code_color_dark:       #999;
 @bg_color_navbar_dark:  rgba(@bg_color_dark, 0.8);
@@ -23,7 +25,8 @@
 	      --fgcolor-light: @text_color_light;
 	   --bgcolornav-light: @bg_color_navbar_light;
 	     --hr-color-light: @hr_color_light;
-	--bgcolor-trans-light: @hr_color_light;
+	--bgcolor-semitrans-light: @hr_color_light;
+	--bglight-transparent: @bg_color_light_trans;
 
 	    --link-color-dark: @link_color_dark;
 	    --code-color-dark: @code_color_dark;
@@ -31,7 +34,8 @@
 	       --fgcolor-dark: @text_color_dark;
 	    --bgcolornav-dark: @bg_color_navbar_dark;
 	      --hr-color-dark: @hr_color_dark;
-	 --bgcolor-trans-dark: @hr_color_dark;
+	 --bgcolor-semitrans-dark: @hr_color_dark;
+	 --bgdark-transparent: @bg_color_dark_trans;
 
 	         --link-color: var(--link-color-light);
 	          --codecolor: var(--code-color-light);
@@ -39,19 +43,23 @@
 	            --fgcolor: var(--fgcolor-light);
 	              --bgnav: var(--bgcolornav-light);
 	           --hr-color: var(--hr-color-light);
-	      --bgcolor-trans: var(--bgcolor-trans-light);
+	 --bgcolor-semi-trans: var(--bgcolor-semitrans-light);
+	--bgcolor-transparent: var(--bglight-transparent);
+	     --navbar-texture: url(/assets/grey_@2X.png);
 
 	}
 } // @supports
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		  --bgcolor: var(--bgcolor-dark);
-		  --fgcolor: var(--fgcolor-dark);
-		--codecolor: var(--codecolor-dark);
-			--bgnav: var(--bgcolornav-dark);
-		 --hr-color: var(--hr-color-dark);
-		--bgcolor-trans: var(--bgcolor-trans-dark);
+	            --bgcolor: var(--bgcolor-dark);
+	            --fgcolor: var(--fgcolor-dark);
+	          --codecolor: var(--codecolor-dark);
+	              --bgnav: var(--bgcolornav-dark);
+	           --hr-color: var(--hr-color-dark);
+	 --bgcolor-semi-trans: var(--bgcolor-semitrans-dark);
+	--bgcolor-transparent: var(--bgdark-transparent);
+	     --navbar-texture: url(/assets/grey-dark_@2X.png);
 	}
 	
 	pre:not([class]) { color: var(--code-color-dark); }

@@ -16,6 +16,13 @@
 .navbar {
 	.cluster(10px);
 	
+	padding: 10px 0;
+	background-image:
+		linear-gradient(to right, var(--bgcolor) 20%, var(--bgcolor-transparent) 45%, var(--bgcolor-transparent) 55%, var(--bgcolor) 80%),
+		var(--navbar-texture);
+	background-position: center top;
+	background-size: 100%, 397px 322px; 
+	
 	.links {
 		ul { display: none; }
 		
@@ -41,6 +48,9 @@
 				
 				a {
 					color: var(--bgcolor);
+					&:focus {
+						background: rgba(0,0,0,0.2);
+					}
 				}
 			}
 			
