@@ -23,7 +23,7 @@
 	/>
 
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
-	<xsl:variable name="data" select="//body//data[@data-slug]" />
+	<xsl:variable name="data" select="(//body//time[@data-slug] | //body//data[@data-slug])[1]" />
 	
 	<xsl:variable name="content-id" select="'content'" />
 	

@@ -25,7 +25,7 @@
 	</xsl:template>
 	
 	<xsl:template match="link">
-		<xsl:param name="currentPage" />
+		<xsl:param name="currentPage" select="/.." />
 		<xsl:variable name="ancestors" select="ancestor-or-self::link" />
 		<xsl:variable name="children" select="link[not(@hide = 'yes')]" />
 		<xsl:variable name="title" select="(@slug[not(normalize-space(../@name))] | @name)[1]" />
@@ -54,14 +54,16 @@
 					<xsl:attribute name="aria-current">page</xsl:attribute>
 				</xsl:if>
 				
-				<xsl:if test="descendant::link[(@slug = $currentPage) or (substring-after(@slug, '/') = $currentPage)]">
+				<xsl:if test="descendant::link[(@slug = $currentPage) or (@name = $currentPage) or (contains(@slug, '/') and substring-after(@slug, '/') = $currentPage)]">
 					<xsl:attribute name="aria-current">location</xsl:attribute>
 				</xsl:if>
 				<xsl:value-of select="$title" />
 			</a>
 			<xsl:if test="$children">
 				<ul class="{@subclass}">
-					<xsl:apply-templates select="$children" />
+					<xsl:apply-templates select="$children">
+						<xsl:with-param name="currentPage" select="$currentPage" />
+					</xsl:apply-templates>
 				</ul>
 			</xsl:if>
 		</li>
