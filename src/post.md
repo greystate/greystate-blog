@@ -1,9 +1,7 @@
 Greystate Web
 =============
 
-What's up?
+Hey there - happy to welcome you here.
 
-Anything new?
--------------
 
 <data data-slug="/"></data>
