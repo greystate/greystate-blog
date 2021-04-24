@@ -25,6 +25,8 @@
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
 	<xsl:variable name="data" select="(//body//time[@data-slug] | //body//data[@data-slug])[1]" />
 	
+	<xsl:variable name="currentPageSlug" select="(//year-index/@year | $data/@data-slug)[1]" />
+	
 	<xsl:variable name="content-id" select="'content'" />
 	
 	<!--
@@ -175,6 +177,16 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	<xsl:template match="year-index">
+		<xsl:variable name="year" select="@year" />
+		<h1>Posts from <xsl:value-of select="$year" /></h1>
+		
+		<xsl:variable name="yearfolder" select="document('../xml/navigation.xml')/navigation/link/link[@name = $year]" />
+		
+		<xsl:apply-templates select="$yearfolder" mode="heading" />
+		
+	</xsl:template>
+	
 	<xsl:template match="p[not(normalize-space())]">
 		<!-- Strip empty <p>s (or <p>s with all empty elements inside) -->
 	</xsl:template>
@@ -188,11 +200,12 @@
 		<a class="skipper" href="#{$content-id}">Skip to content</a>
 		<nav class="navbar">
 			<xsl:apply-templates select="document('../xml/navigation.xml')/navigation">
-				<xsl:with-param name="currentPage" select="$data/@data-slug" />
+				<xsl:with-param name="currentPage" select="$currentPageSlug" />
 			</xsl:apply-templates>
 		</nav>
 	</xsl:template>
 
 	<xsl:include href="navigation.xslt" />
+	<xsl:include href="yearposts.xslt" />
 
 </xsl:stylesheet>
