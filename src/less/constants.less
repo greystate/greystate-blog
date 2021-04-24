@@ -8,6 +8,7 @@
 @bg_color_navbar_light: rgba(@bg_color_light, 0.8);
 @hr_color_light:        rgba(0, 0, 0, 0.2);
 @link_color_light:      #c22;
+@link_color_light_50:   rgba(@link_color_light, 0.5);
 
 @bg_color_dark:         #333;
 @bg_color_dark_trans:   rgba(#333, 0);
@@ -16,10 +17,12 @@
 @bg_color_navbar_dark:  rgba(@bg_color_dark, 0.8);
 @hr_color_dark:         rgba(200, 200, 200, 0.2);
 @link_color_dark:       #f84;
+@link_color_dark_50:    rgba(@link_color_dark, 0.5);
 
 @supports(--property: "value") {
 	:root {
 	   --link-color-light: @link_color_light;
+	--link-color-light-50: @link_color_light_50;
 	   --code-color-light: @code_color_light;
 	      --bgcolor-light: @bg_color_light;
 	      --fgcolor-light: @text_color_light;
@@ -29,6 +32,7 @@
 	--bglight-transparent: @bg_color_light_trans;
 
 	    --link-color-dark: @link_color_dark;
+	 --link-color-dark-50: @link_color_dark_50;
 	    --code-color-dark: @code_color_dark;
 	       --bgcolor-dark: @bg_color_dark;
 	       --fgcolor-dark: @text_color_dark;
@@ -38,6 +42,7 @@
 	 --bgdark-transparent: @bg_color_dark_trans;
 
 	         --link-color: var(--link-color-light);
+	      --link-color_50: var(--link-color-light-50);
 	          --codecolor: var(--code-color-light);
 	            --bgcolor: var(--bgcolor-light);
 	            --fgcolor: var(--fgcolor-light);
