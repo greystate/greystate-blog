@@ -18,8 +18,8 @@ echo "Copy assets over"
 cp $BUILD_FOLDER/assets/*.* "$DEPLOY_DIRECTORY/assets"
 cp $BUILD_FOLDER/images/*.* "$DEPLOY_DIRECTORY/images"
 
-echo "Remove the post.html files in the blog directories"
-find "$BUILD_FOLDER/log" -name "post.html" -delete
+echo "Remove the post.html files in the build directories"
+find "$BUILD_FOLDER" -name "post.html" -delete
 
 
 echo "Copy over the complete blog structure"
