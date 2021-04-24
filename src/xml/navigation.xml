@@ -20,7 +20,9 @@
 			</link>
 		</link>
 		<link name="2017">
-			<link slug="09" name="September" hide="yes" />
+			<link slug="09" name="September" hide="yes">
+				<link slug="28/where-visible" name="Where Visible???" />
+			</link>
 		</link>
 		<link name="2008">
 			<link slug="05" name="May" hide="yes">
