@@ -5,7 +5,7 @@
 	<link slug="log" name="Blog" subclass="archives">
 		<link name="2021">
 			<link slug="04" name="April" hide="yes">
-				<link slug="21/hotfix-with-git" name="Hotfixing on Umbraco Cloud with Git" hide="yes" />
+				<link slug="22/hotfix-with-git" name="Hotfixing on Umbraco Cloud with Git" hide="yes" />
 			</link>
 		</link>
 		<link name="2020">
