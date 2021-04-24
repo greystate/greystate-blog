@@ -50,7 +50,7 @@
 				</xsl:if>
 				
 				<!-- Should we add the aria-current attribute? -->
-				<xsl:if test="@slug = $currentPage">
+				<xsl:if test="@slug = $currentPage or @name = $currentPage">
 					<xsl:attribute name="aria-current">page</xsl:attribute>
 				</xsl:if>
 				
