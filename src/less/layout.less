@@ -1,3 +1,20 @@
+body {
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+	> footer {
+		margin-top: auto;
+		
+		.logo {
+			margin: 1em auto;
+			opacity: 0.2;
+		}
+	
+	}
+}
+
 @supports(display: grid) {
 
 	article when (@enable_grid = true) {
@@ -33,5 +50,4 @@
 		}
 	}
 	
-
 } // @supports

@@ -83,6 +83,9 @@
 				<xsl:apply-templates />
 				
 			</article>
+			<footer>
+				<img class="logo" src="/images/greystate_logo.png" width="300" height="125" alt="" />
+			</footer>
 			
 		</xsl:copy>
 	</xsl:template>
