@@ -63,6 +63,7 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			<title><xsl:value-of select="../body/h1[1]" /> — Greystate Blog</title>
 			
+			<script src="/assets/app.min.js" defer="defer"></script>
 			<script src="/assets/prism.min.js" defer="defer"></script>
 			
 			<xsl:apply-templates />
@@ -191,6 +192,7 @@
 		<!-- Strip empty <p>s (or <p>s with all empty elements inside) -->
 	</xsl:template>
 	
+	<!-- Strip this one - the XSLT processor adds its own -->
 	<xsl:template match="meta[@charset]"></xsl:template>
 	
 	<!--
