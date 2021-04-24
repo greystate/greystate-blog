@@ -76,7 +76,7 @@ git checkout -b hotfix
 All set to add the changes to the `hotfix` branch now:
 
 ```bash
-git cherry-pick e43311fd
+git cherry-pick <HASH>
 ```
 
 Now comes the scary part -- we want to push the `hotfix` branch directly into the LIVE remote's
