@@ -1,0 +1,11 @@
+{
+  "clips" : [
+    {
+      "content" : "<time data-slug=\"$0\" datetime=\"$1\">${2:01} Feb, 2022<\/time>",
+      "name" : "Time tag",
+      "scope" : "editor",
+      "syntax" : "markdown",
+      "trigger" : "time"
+    }
+  ]
+}
