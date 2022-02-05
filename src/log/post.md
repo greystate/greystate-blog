@@ -3,6 +3,11 @@ Greystate Weblog
 
 Latest post(s):
 
+2022
+----
+
+- Feb 5: [Using UserSecrets for Connection Strings](/log/2022/02/05/secrets/)
+
 2021
 ----
 

@@ -5,7 +5,7 @@
 ]>
 <!--
 	blogpost.xslt
-	
+
 	NOTE: This transform runs on the *generated* HTML from the original Markdown file.
 	It's run with `xsltproc` using the `html` option which is lax with HTML
 	as input instead of XML.
@@ -24,11 +24,11 @@
 
 	<xsl:variable name="blog-url" select="'https://greystate.dk/log/'" />
 	<xsl:variable name="data" select="(//body//time[@data-slug] | //body//data[@data-slug])[1]" />
-	
+
 	<xsl:variable name="currentPageSlug" select="(//year-index/@year | $data/@data-slug)[1]" />
-	
+
 	<xsl:variable name="content-id" select="'content'" />
-	
+
 	<!--
 	Identity transform
 	Copies elements, attributes and text verbatim, but leaves
@@ -40,14 +40,14 @@
 			<xsl:apply-templates select="* | text()" />
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<!-- :: Specific templates :: -->
 	<xsl:template match="html">
 		<html lang="en">
 			<xsl:apply-templates />
 		</html>
 	</xsl:template>
-	
+
 	<!--
 	Generate the `head` tag
 	Handles getting the title of the post, to put in ... the <title> tag!
@@ -62,37 +62,37 @@
 
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			<title><xsl:value-of select="../body/h1[1]" /> — Greystate Blog</title>
-			
+
 			<script src="/assets/app.min.js" defer="defer"></script>
 			<script src="/assets/prism.min.js" defer="defer"></script>
-			
+
 			<xsl:apply-templates />
-			
+
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<!--
 	The body template wraps the post content in an `article` element and adds the navbar.
 	-->
 	<xsl:template match="body">
 		<xsl:copy>
 			<xsl:call-template name="RenderNavigation" />
-			
+
 			<article id="{$content-id}">
-				
+
 				<xsl:apply-templates />
-				
+
 			</article>
 			<footer>
 				<img class="logo" src="/images/greystate_logo.png" width="300" height="125" alt="" />
 			</footer>
-			
+
 		</xsl:copy>
 	</xsl:template>
 
 	<!--
 	MultiMarkdown compiles a `<figure>` from an image, but puts the alt text in the `<figcaption>`.
-	
+
 		<figure>
 		<img src="/path/to/image.png" alt="Alt Text" id="ID" title="Description" />
 		<figcaption>Alt Text</figcaption>
@@ -146,7 +146,7 @@
 				<xsl:value-of select="$data/@data-slug" />
 			</xsl:if>
 		</xsl:variable>
-		
+
 		<xsl:variable name="year" select="substring($dateval, 1, 4)" />
 		<xsl:variable name="month" select="substring($dateval, 6, 2)" />
 		<xsl:variable name="date" select="substring($dateval, 9, 2)" />
@@ -159,19 +159,20 @@
 			</a>
 		</abbr>
 	</xsl:template>
-	
+
 	<!--
-	Add linkable ids to header tags (lowercased with dashed instead of spaces).
+	Add linkable ids to header tags (lowercased with dashes instead of spaces).
+	Also removes ';' characters - that's why there's an extra one in the translate().
 	-->
 	<xsl:template match="h1 | h2 | h3 | h4 | h5 | h6">
 		<xsl:copy>
 			<xsl:attribute name="id">
-				<xsl:value-of select="translate(., ' &upper;', '-&lower;')" />
+				<xsl:value-of select="translate(., ' &upper;;', '-&lower;')" />
 			</xsl:attribute>
 			<xsl:apply-templates />
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<!-- Open external links in a new window -->
 	<xsl:template match="a[starts-with(@href, 'http')][not(contains(@href, 'greystate.dk'))]">
 		<xsl:copy>
@@ -180,24 +181,24 @@
 			<xsl:apply-templates select="* | text()" />
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<xsl:template match="year-index">
 		<xsl:variable name="year" select="@year" />
 		<h1>Posts from <xsl:value-of select="$year" /></h1>
-		
+
 		<xsl:variable name="yearfolder" select="document('../xml/navigation.xml')/navigation/link/link[@name = $year]" />
-		
+
 		<xsl:apply-templates select="$yearfolder" mode="heading" />
-		
+
 	</xsl:template>
-	
+
 	<xsl:template match="p[not(normalize-space())]">
 		<!-- Strip empty <p>s (or <p>s with all empty elements inside) -->
 	</xsl:template>
-	
+
 	<!-- Strip this one - the XSLT processor adds its own -->
 	<xsl:template match="meta[@charset]"></xsl:template>
-	
+
 	<!--
 	Render some navigation for the site.
 	-->

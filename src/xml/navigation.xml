@@ -3,6 +3,11 @@
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
 	<link slug="log" name="Blog" subclass="archives">
+		<link name="2022">
+			<link slug="02" name="February" hide="yes">
+				<link slug="05/secrets" name="Using UserSecrets for Connection Strings" hide="yes" />
+			</link>
+		</link>
 		<link name="2021">
 			<link slug="04" name="April" hide="yes">
 				<link slug="22/hotfix-with-git" name="Hotfixing on Umbraco Cloud with Git" hide="yes" />
@@ -19,11 +24,11 @@
 				<link slug="04/glorious-mess" name="What A Glorious Mess" hide="yes" />
 			</link>
 		</link>
-		<link name="2017">
+<!-- 		<link name="2017">
 			<link slug="09" name="September" hide="yes">
 				<link slug="28/where-visible" name="Where Visible???" />
 			</link>
-		</link>
+		</link> -->
 		<link name="2008">
 			<link slug="05" name="May" hide="yes">
 				<link slug="06/css-variables-bundle" name="CSS Variables TextMate Bundle" hide="yes" />
@@ -35,11 +40,11 @@
 				<link slug="18/regex-2008" name="Regex, The (2008)" hide="yes" />
 			</link>
 		</link>
-		<link name="2007">
+<!-- 		<link name="2007">
 			<link slug="08" name="August" hide="yes">
 				<link slug="17/think" name="Sometimes you need to Think!" hide="yes" />
 			</link>
-		</link>
+		</link> -->
 	</link>
 	<link slug="who" name="About" />
 	<link slug="resources" name="Resources" subclass="res">

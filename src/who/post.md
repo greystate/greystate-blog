@@ -38,14 +38,20 @@ What's rendered by Umbraco is of my own doing - not someone else's.
 Current toolset
 ---------------
 
-These days, I'm using [Panic][PANIC]'s brand new [Nova][NOVA] code editor, which
+I host a lot of code on [GitHub][GHPROFILE] and post a lot of words on [Twitter][TWT].
+
+I've been using [TextMate][TEXTMATE] since forever, but these days I'm using
+[Panic][PANIC]'s brand new [Nova][NOVA] code editor more and more, which
 I like quite a lot.
 
-
+I use [CodeKit][CK] for all things compiling (Less, ES6 etc.).
 
 [UMB]: https://umbraco.com
 [VV]: https://vokseverk.dk
 [PLURALIZE]: https://painintheenglish.com/case/333
+[TEXTMATE]: https://macromates.com
 [PANIC]: https://panic.com
 [NOVA]: https://nova.app
-
+[CK]: https://codekitapp.com
+[GHPROFILE]: https://github.com/greystate
+[TWT]: https://twitter.com/greystate
