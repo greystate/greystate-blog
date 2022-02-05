@@ -3,7 +3,7 @@ BUILD_FOLDER="$PROJECT_FOLDER/build"
 
 DEPLOY_DIRECTORY="/Users/chriz/Development/src/greystate-github-io"
 
-echo "Build the blog's year pages"
+# echo "Build the blog's year pages"
 # xsltproc -o $OUTPUT_DIR/index.html year.xslt navigation.xml
 
 echo "Make any missing directories"
