@@ -9,6 +9,9 @@
 			</link>
 		</link>
 		<link name="2021">
+			<link slug="03" name="March" hide="yes">
+				<link slug="04/keep-reading" name="I Hope To Keep Reading" hide="yes" />
+			</link>
 			<link slug="04" name="April" hide="yes">
 				<link slug="22/hotfix-with-git" name="Hotfixing on Umbraco Cloud with Git" hide="yes" />
 			</link>
