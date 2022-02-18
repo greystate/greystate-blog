@@ -6,6 +6,7 @@ Latest post(s):
 2022
 ----
 
+- Feb 11: [An Update on the Reading Situation](/log/2022/02/11/reading-update)
 - Feb 5: [Using UserSecrets for Connection Strings](/log/2022/02/05/secrets/)
 
 2021

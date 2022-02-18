@@ -5,6 +5,7 @@
 	<link slug="log" name="Blog" subclass="archives">
 		<link name="2022">
 			<link slug="02" name="February" hide="yes">
+				<link slug="11/reading-update" name="An Update On The Reading Situation" hide="yes" />
 				<link slug="05/secrets" name="Using UserSecrets for Connection Strings" hide="yes" />
 			</link>
 		</link>
