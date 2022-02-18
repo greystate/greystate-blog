@@ -19,6 +19,9 @@
 @link_color_dark:       #f84;
 @link_color_dark_50:    rgba(@link_color_dark, 0.5);
 
+@note_color:            #860;
+@note_color_20:         rgba(@note_color, 0.2);
+
 @supports(--property: "value") {
 	:root {
 	   --link-color-light: @link_color_light;
@@ -40,6 +43,8 @@
 	      --hr-color-dark: @hr_color_dark;
 	 --bgcolor-semitrans-dark: @hr_color_dark;
 	 --bgdark-transparent: @bg_color_dark_trans;
+	         --note-color: @note_color;
+	      --note-color-20: @note_color_20;
 
 	         --link-color: var(--link-color-light);
 	      --link-color_50: var(--link-color-light-50);
