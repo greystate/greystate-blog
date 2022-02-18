@@ -2,29 +2,29 @@
 article {
 	margin: 2em auto 3rem;
 	max-width: 75ch;
-	
+
 	h1 {
 		color: var(--fgcolor);
 		background: var(--bgcolor-semi-trans);
-		
+
 		font-size: 2.2em;
 		padding: 0 0 0 1em;
 		display: flex;
 		justify-content: space-between;
-		
+
 		border-radius: 3px 0 0 3px;
-		
+
 		> * { margin-right: auto; }
-		
+
 		+ .date {
 			display: block;
 			text-align: right;
 		}
-		
+
 		+ *:not(.date) {
 			margin-top: 3.5em;
 		}
-		
+
 		&::after {
 			content: "";
 			flex: 0 1 7rem;
@@ -40,7 +40,7 @@ article {
 		border-bottom: 1px solid;
 		margin-bottom: 1em;
 		margin-top: 2em;
-		
+
 		&::after {
 			content: "";
 			display: block;
@@ -48,18 +48,18 @@ article {
 			border-right: 10px solid;
 			margin-top: -5px;
 		}
-		
+
 		a {
 			color: inherit !important;
 			text-decoration: none;
-			
+
 			&:hover, &:focus {
 				color: #c22 !important;
 				text-decoration: underline;
 			}
 		}
 	}
-	
+
 	pre[class*=language-],
 	blockquote {
 		margin-top: 3em;
@@ -69,7 +69,7 @@ article {
 	pre[class*=language-] {
 		&, code[class*="language-"] { font-size: 0.8rem; }
 	}
-	
+
 	code:not([class]) {
 		background: #ccc;
 		color: #666;
@@ -77,15 +77,15 @@ article {
 		padding-right: 0.2em;
 		padding-left: 0.2em;
 	}
-	
+
 	figure {
 		border: 2px solid rgba(0, 0, 0, 0.3);
 		border-bottom: 0;
-		
+
 		// Hmmm... a bit suspicious, but looks better.
 		img { width: 100%; }
 	}
-	
+
 	figcaption {
 		max-width: 100%;
 		text-align: center;
@@ -93,7 +93,7 @@ article {
 		padding: 0.1em 1em;
 		background: rgba(0, 0, 0, 0.3);
 	}
-	
+
 	blockquote {
 		margin-top: 2rem;
 		position: relative;
@@ -102,7 +102,7 @@ article {
 		color: #fff;
 		padding: 1rem 1rem 1rem 3rem;
 		border-left: 6px solid #999;
-		
+
 		&::before, &::after {
 			font-style: normal;
 			font-size: 3rem;
@@ -111,7 +111,7 @@ article {
 			opacity: 0.5;
 			position: absolute;
 		}
-		
+
 		&::before {
 			content: open-quote;
 			left: 1rem;
@@ -124,13 +124,13 @@ article {
 			bottom: 0.4rem;
 		}
 	}
-	
+
 	> hr {
 		border: 1px dashed rgba(0, 0, 0, 0.3);
 		border-color: var(--hr-color);
 		width: 25%;
 	}
-	
+
 	// This is for when Prism hasn't kicked in (i.e. probably no JS)
 	pre:not([class]) {
 		background: rgba(0, 0, 0, 0.5);
