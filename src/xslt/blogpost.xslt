@@ -178,6 +178,7 @@
 		<xsl:copy>
 			<xsl:copy-of select="@*" />
 			<xsl:attribute name="target">_blank</xsl:attribute>
+			<xsl:attribute name="rel">noopener noreferrer</xsl:attribute>
 			<xsl:apply-templates select="* | text()" />
 		</xsl:copy>
 	</xsl:template>
