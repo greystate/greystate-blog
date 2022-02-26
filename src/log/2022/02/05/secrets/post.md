@@ -56,6 +56,8 @@ Ok, so next up was that 3rd entry in the list on Our: "UserSecrets", and I start
 to look for how that worked... but lo and behold, no one has managed to write
 that section (yet). It just wasn't there.
 
+<div class="note"><strong>Update:</strong> It is there now (I wrote and submitted pull request which has been merged)</div>
+
 So I took the problem up with DuckDuckGo and found some docs on how to get
 that working (I fully admit that I was half-expecting to have to install a tool
 or three just to get this going). It was actually pretty easy - here's a link to
