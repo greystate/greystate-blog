@@ -1,7 +1,7 @@
 10 Years Ago, Today
 ===================
 
-<time datetime="2008-05-06T20:45:42+0200">16 Jun, 2008</time>
+<time data-slug="ten-years-ago" datetime="2008-06-16T20:45:42+0200">16 Jun, 2008</time>
 
 I can't believe it's actually been *ten years* since I entered the stage at Train, Aarhus
 with two of my very good musical friends Tove & Johan, to play my final exam concert
@@ -18,4 +18,3 @@ and I'm working on it - I'll put a couple of MP3's up later, but for now: Cheers
 
 [SV]: https://www.vai.com/
 
-<data data-slug="ten-years-ago"></data>
