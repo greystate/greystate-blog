@@ -8,44 +8,44 @@
 	left: 0;
 	background: #000;
 	color: #fff;
-	
+
 	&:focus { outline: none; }
 	&:not(:focus):not(:active) { .visuallyHidden(); }
 }
 
 .navbar {
 	.cluster(10px);
-	
+
 	padding: 10px 0;
 	background-image:
 		linear-gradient(to right, var(--bgcolor) 20%, var(--bgcolor-transparent) 45%, var(--bgcolor-transparent) 55%, var(--bgcolor) 80%),
 		var(--navbar-texture);
 	background-position: center top;
-	background-size: 100%, 397px 322px; 
-	
+	background-size: 100%, 397px 322px;
+
 	.links {
 		ul { display: none; }
-		
+
 		a {
 			padding: 0.3em 0.8em;
 			display: inline-block;
 			text-decoration: none;
-			
+
 			color: var(--fgcolor);
 			font-weight: bold;
-			
+
 			&:hover, &:focus {
 				outline: none;
 				background: var(--fgcolor);
 				color: var(--bgcolor);
 			}
-			
+
 			&:focus + ul,
 			+ ul:focus-within {
 				display: block;
 				position: absolute;
 				background: var(--fgcolor);
-				
+
 				a {
 					color: var(--bgcolor);
 					&:focus {
@@ -53,7 +53,7 @@
 					}
 				}
 			}
-			
+
 			&[aria-current] {
 				text-decoration: underline;
 			}
