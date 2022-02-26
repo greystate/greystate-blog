@@ -84,7 +84,7 @@
 
 			</article>
 			<footer>
-				<img class="logo" src="/images/greystate_logo.png" width="300" height="125" alt="" />
+				<img class="logo" src="/images/greystate_logo.png" width="300" height="125" alt="Greystate" />
 			</footer>
 
 		</xsl:copy>
