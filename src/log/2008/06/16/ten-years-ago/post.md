@@ -14,7 +14,11 @@ to perform [Steve Vai][SV]'s "Die To Live" for a bunch of musicians who had
 for too long been engulfed in the world of Jazz and music theory. Hehe - just kidding :-)
 
 I know, I know - it would only be appropriate to provide you with some evidence,
-and I'm working on it - I'll put a couple of MP3's up later, but for now: Cheers!
+and I'm working on it - I'll put a couple of MP3s up later, but for now: Cheers!
+
+<div class="note">This post was later updated with a custom Flash audio-player
+with a couple of MP3s. Well, Flash no longer works, but if you'd like to hear
+some of the songs, shoot me an email and I'll hook you up with a feed :)</div>
 
 [SV]: https://www.vai.com/
 
