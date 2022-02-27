@@ -1,0 +1,49 @@
+body {
+	font-size: 1em;
+	font-family: "Avenir Next", "Avenir", Helvetica, sans-serif;
+	
+	padding-right: 1em;
+	padding-left: 1em;
+	
+	background: @bg_color_light;
+	background: var(--bgcolor);
+
+	color: @text_color_light;
+	color: var(--fgcolor);
+}
+
+a {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
+:focus {
+	outline: 2px dashed @link_color_light_50;
+	outline-offset: 0.4em;
+}
+
+/* Set colors for links in light mode */
+@media (prefers-color-scheme: light) {
+	a:not([class]):link,
+	a:not([class]):visited,
+	a:not([class]):active {
+		color: var(--link-color-light);
+	}
+	
+	:focus {
+		outline-color: var(--link-color-light-50);
+	}
+}
+
+/* Set colors for links in dark mode */
+@media (prefers-color-scheme: dark) {
+	a:not([class]):link,
+	a:not([class]):visited,
+	a:not([class]):active {
+		color: var(--link-color-dark);
+	}
+	
+	:focus {
+		outline-color: var(--link-color-dark-50);
+	}
+}

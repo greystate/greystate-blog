@@ -1,12 +1,12 @@
 <data data-slug="who"></data>
 
-# About me
+About me
+========
 
-I'm a frontend developer from Denmark doing mostly content sites with [Umbraco CMS][UMB].
+I'm a frontend developer from Denmark doing mostly content sites with [Umbraco CMS][UMB]. I'm also a co-owner of [Vokseværk][VV], a design and development bureau in Aarhus, Denmark.
 
-I'm co-owner of [Vokseværk][VV], a design and development bureau in Aarhus, Denmark.
-
-## Experience
+Experience
+----------
 
 Over the years I've had the pleasure of working with a bunch of different technologies,
 including (in no particular order):
@@ -35,7 +35,23 @@ I finally found Umbraco in circa 2009 and haven't looked away since.
 
 What's rendered by Umbraco is of my own doing - not someone else's.
 
+Current toolset
+---------------
+
+I host a lot of code on [GitHub][GHPROFILE] and post a lot of words on [Twitter][TWT].
+
+I've been using [TextMate][TEXTMATE] since forever, but these days I'm using
+[Panic][PANIC]'s brand new [Nova][NOVA] code editor more and more, which
+I like quite a lot.
+
+I use [CodeKit][CK] for all things compiling (Less, ES6 etc.).
 
 [UMB]: https://umbraco.com
 [VV]: https://vokseverk.dk
 [PLURALIZE]: https://painintheenglish.com/case/333
+[TEXTMATE]: https://macromates.com
+[PANIC]: https://panic.com
+[NOVA]: https://nova.app
+[CK]: https://codekitapp.com
+[GHPROFILE]: https://github.com/greystate
+[TWT]: https://twitter.com/greystate

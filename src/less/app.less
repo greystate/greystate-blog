@@ -3,20 +3,20 @@
 
 @supports(--property: "value") {
 	:root {
-		   --bgcolor-light: @bg_color_light;
-		   --fgcolor-light: @text_color_light;
-		--code-color-light: @code_color_light;
+	     --bgcolor-light: @bg_color_light;
+	     --fgcolor-light: @text_color_light;
+	  --code-color-light: @code_color_light;
 	  --bgcolornav-light: @bg_color_navbar_light;
 
-		    --bgcolor-dark: @bg_color_dark;
-		    --fgcolor-dark: @text_color_dark;
-		 --code-color-dark: @code_color_dark;
-		 --bgcolornav-dark: @bg_color_navbar_dark;
-	
-		         --bgcolor: var(--bgcolor-light);
-		         --fgcolor: var(--fgcolor-light);
-		       --codecolor: var(--code-color-light);
-		           --bgnav: var(--bgcolornav-light);
+	      --bgcolor-dark: @bg_color_dark;
+	      --fgcolor-dark: @text_color_dark;
+	   --code-color-dark: @code_color_dark;
+	   --bgcolornav-dark: @bg_color_navbar_dark;
+
+	           --bgcolor: var(--bgcolor-light);
+	           --fgcolor: var(--fgcolor-light);
+	         --codecolor: var(--code-color-light);
+	             --bgnav: var(--bgcolornav-light);
 	}
 } // @supports
 
@@ -28,7 +28,10 @@
 		    --bgnav: var(--bgcolornav-dark);
 	}
 	
-	article h1 { color: var(--fgcolor-dark); }
+	article h1 {
+		color: var(--fgcolor-dark);
+	}
+	
 	pre:not([class]) { color: var(--code-color-dark); }
 }
 
@@ -40,7 +43,7 @@
 
 body {
 	font-size: 1em;
-	font-family: "Avenir Next", Helvetica, sans-serif;
+	font-family: "Avenir Next", "Avenir", Helvetica, sans-serif;
 	
 	padding-right: 1em;
 	padding-left: 1em;
@@ -51,27 +54,29 @@ body {
 	color: @text_color_light;
 	color: var(--fgcolor);
 	
-	background-image: url(/images/greystate_logo.png);
-	background-size: 20vw;
-	background-repeat: no-repeat;
-	background-position: 1rem 6rem;
-	background-attachment: fixed;
-	background-blend-mode: multiply;
+//	background-image: url(/images/greystate_logo.png);
+//	background-size: 20vw;
+//	background-repeat: no-repeat;
+//	background-position: 1rem 6rem;
+//	background-blend-mode: multiply;
+}
+
+a:not([class]) {
+	color: #a3c493;
 }
 
 @supports(--property: "value") {
 
 	body {
-		background-image:
-			url(/images/greystate_logo.png),
-			linear-gradient(var(--bgnav, rgba(0, 0, 200, 0.1)), var(--bgnav, rgba(0, 0, 200, 0.1)));
-		background-size:
-			20vw auto,
-			23vw 32px;
-		background-repeat: no-repeat, repeat-y;
-		background-position: 1rem 6rem, left center;
-		background-attachment: fixed;
-		background-blend-mode: multiply, normal;
+//		background-image:
+//			url(/images/greystate_logo.png),
+//			linear-gradient(var(--bgnav, rgba(0, 0, 200, 0.1)), var(--bgnav, rgba(0, 0, 200, 0.1)));
+//		background-size:
+//			20vw auto,
+//			23vw 32px;
+//		background-repeat: no-repeat, repeat-y;
+//		background-position: 1rem 6rem, left center;
+//		background-blend-mode: multiply, normal;
 	}
 
 } // @supports
@@ -101,11 +106,28 @@ h2 {
 @supports (display: grid) {
 
 	body when (@enable_grid = true) {
-		// Remove the safety padding
-		padding-right: 0;
-		padding-left: 0;
+		@media only screen and (min-width: 800px) {
+			// Remove the safety padding
+			padding-right: 0;
+			padding-left: 0;
+		}
+		
 	}
 	
+}
+
+/* Set colors for links in light mode */
+@media (prefers-color-scheme: light) {
+	a:not([class]):link { color: #c22; }
+	a:not([class]):visited { color: #c22; }
+	a:not([class]):active { color: #c22; }
+}
+
+/* Set colors for links in dark mode */
+@media (prefers-color-scheme: dark) {
+	a:not([class]):link { color: #f84; }
+	a:not([class]):visited { color: #f84; }
+	a:not([class]):active { color: #f84; }
 }
 
 @import "article";

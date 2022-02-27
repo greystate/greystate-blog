@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="../xslt/transform-year.xslt"?>
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
 	<link slug="log" name="Blog" subclass="archives">
-		<link name="2007">
-			<link slug="08" name="August" hide="yes" />
+		<link name="2022">
+			<link slug="02" name="February" hide="yes">
+				<link slug="11/reading-update" name="An Update On The Reading Situation" hide="yes" />
+				<link slug="05/secrets" name="Using UserSecrets for Connection Strings" hide="yes" />
+			</link>
 		</link>
-		<link name="2008">
-			<link slug="05" name="May" hide="yes" />
-			<link slug="06" name="June" hide="yes" />
-			<link slug="12" name="December" hide="yes" />
+		<link name="2021">
+			<link slug="03" name="March" hide="yes">
+				<link slug="04/keep-reading" name="I Hope To Keep Reading" hide="yes" />
+			</link>
+			<link slug="04" name="April" hide="yes">
+				<link slug="22/hotfix-with-git" name="Hotfixing on Umbraco Cloud with Git" hide="yes" />
+			</link>
 		</link>
-		<link name="2017">
-			<link slug="09" name="September" hide="yes" />
+		<link name="2020">
+			<link slug="09" name="September" hide="yes">
+				<link slug="04/umbraco-net-core-alpha" name="Trying Out the Umbraco .NET Core Alpha Release" hide="yes" />
+			</link>
 		</link>
 		<link name="2019">
 			<link slug="10" name="October" hide="yes">
-				<link slug="04/glorious-mess" name="What A Glorious Mess" hide="yes" />
 				<link slug="08/shapeup" name="Shape Up!" hide="yes" />
+				<link slug="04/glorious-mess" name="What A Glorious Mess" hide="yes" />
 			</link>
 		</link>
+<!-- 		<link name="2017">
+			<link slug="09" name="September" hide="yes">
+				<link slug="28/where-visible" name="Where Visible???" />
+			</link>
+		</link> -->
+		<link name="2008">
+			<link slug="05" name="May" hide="yes">
+				<link slug="06/css-variables-bundle" name="CSS Variables TextMate Bundle" hide="yes" />
+			</link>
+			<link slug="06" name="June" hide="yes">
+				<link slug="16/ten-years-ago" name="Ten Years Ago, Today" hide="yes" />
+			</link>
+			<link slug="12" name="December" hide="yes">
+				<link slug="18/regex-2008" name="Regex, The (2008)" hide="yes" />
+			</link>
+		</link>
+<!-- 		<link name="2007">
+			<link slug="08" name="August" hide="yes">
+				<link slug="17/think" name="Sometimes you need to Think!" hide="yes" />
+			</link>
+		</link> -->
 	</link>
 	<link slug="who" name="About" />
 	<link slug="resources" name="Resources" subclass="res">

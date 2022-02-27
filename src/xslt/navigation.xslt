@@ -25,7 +25,7 @@
 	</xsl:template>
 	
 	<xsl:template match="link">
-		<xsl:param name="currentPage" />
+		<xsl:param name="currentPage" select="/.." />
 		<xsl:variable name="ancestors" select="ancestor-or-self::link" />
 		<xsl:variable name="children" select="link[not(@hide = 'yes')]" />
 		<xsl:variable name="title" select="(@slug[not(normalize-space(../@name))] | @name)[1]" />
@@ -36,29 +36,48 @@
 					<xsl:apply-templates select="$ancestors" mode="url" />
 				</xsl:attribute>
 				
-				<!-- If this is the home page override the href -->
-				<xsl:if test="@slug = '/'"><xsl:attribute name="href">/</xsl:attribute></xsl:if>
+				<xsl:if test="count($ancestors) &gt; 1">
+					<xsl:attribute name="tabindex">-1</xsl:attribute>
+				</xsl:if>
 				
-				<!-- If there's a complete URL is specified, use that instead -->
+				<!--
+				If there's a complete URL is specified,
+				use that instead and open in a new window
+				-->
 				<xsl:if test="normalize-space(@url)">
 					<xsl:attribute name="href"><xsl:value-of select="@url" /></xsl:attribute>
+					<xsl:attribute name="target">_blank</xsl:attribute>
 				</xsl:if>
 				
 				<!-- Should we add the aria-current attribute? -->
-				<xsl:if test="@slug = $currentPage">
+				<xsl:if test="@slug = $currentPage or @name = $currentPage">
 					<xsl:attribute name="aria-current">page</xsl:attribute>
 				</xsl:if>
 				
-				<xsl:if test="descendant::link[@slug = $currentPage]">
+				<xsl:if test="descendant::link[(@slug = $currentPage) or (@name = $currentPage) or (contains(@slug, '/') and substring-after(@slug, '/') = $currentPage)]">
 					<xsl:attribute name="aria-current">location</xsl:attribute>
 				</xsl:if>
 				<xsl:value-of select="$title" />
 			</a>
 			<xsl:if test="$children">
 				<ul class="{@subclass}">
-					<xsl:apply-templates select="$children" />
+					<xsl:apply-templates select="$children">
+						<xsl:with-param name="currentPage" select="$currentPage" />
+					</xsl:apply-templates>
 				</ul>
 			</xsl:if>
+		</li>
+	</xsl:template>
+	
+	<xsl:template match="link[@slug = '/']">
+		<xsl:param name="currentPage" />
+		<li>
+			<a href="/">
+				<xsl:if test="@slug = $currentPage">
+					<xsl:attribute name="aria-current">page</xsl:attribute>
+				</xsl:if>
+				<xsl:value-of select="@name" />
+			</a>
 		</li>
 	</xsl:template>
 	
