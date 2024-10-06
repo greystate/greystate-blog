@@ -1,6 +1,6 @@
 {
   "workspace.art_style" : 0,
-  "workspace.color" : 1,
+  "workspace.color" : 12,
   "workspace.name" : "Greystate Blog",
   "workspace.preview_append_paths" : true,
   "workspace.preview_root" : "build",
