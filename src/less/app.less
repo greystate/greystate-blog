@@ -1,3 +1,7 @@
+//
+// THIS IS NOT THE ONE WE'RE USING
+//
+
 @import "constants";
 @import (less) "../../vendor/modern-reset/reset.css";
 
@@ -27,11 +31,11 @@
 		--codecolor: var(--codecolor-dark);
 		    --bgnav: var(--bgcolornav-dark);
 	}
-	
+
 	article h1 {
 		color: var(--fgcolor-dark);
 	}
-	
+
 	pre:not([class]) { color: var(--code-color-dark); }
 }
 
@@ -44,16 +48,16 @@
 body {
 	font-size: 1em;
 	font-family: "Avenir Next", "Avenir", Helvetica, sans-serif;
-	
+
 	padding-right: 1em;
 	padding-left: 1em;
-	
+
 	background: @bg_color_light;
 	background: var(--bgcolor);
 
 	color: @text_color_light;
 	color: var(--fgcolor);
-	
+
 //	background-image: url(/images/greystate_logo.png);
 //	background-size: 20vw;
 //	background-repeat: no-repeat;
@@ -89,15 +93,15 @@ h1 {
 	font-weight: 600;
 	font-size: 1.7rem;
 	border-right: 10px solid;
-	
+
 	+ .date { text-align: right;}
-	
+
 	+ *:not(.date) { margin-top: 3.5em; }
 }
 
 h2 {
 	font-size: 1.2rem;
-	
+
 	+ * { margin-top: 0; }
 }
 
@@ -111,9 +115,14 @@ h2 {
 			padding-right: 0;
 			padding-left: 0;
 		}
-		
+
 	}
-	
+
+}
+
+/* Allow view-transitions between page views */
+@view-transition {
+	navigation: auto;
 }
 
 /* Set colors for links in light mode */
