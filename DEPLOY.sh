@@ -3,19 +3,24 @@ BUILD_FOLDER="$PROJECT_FOLDER/build"
 
 DEPLOY_DIRECTORY="/Users/chriz/Development/src/greystate.github.io"
 
+
 # echo "Build the blog's year pages"
 # xsltproc -o $OUTPUT_DIR/index.html year.xslt navigation.xml
 
 echo "Make any missing directories"
 if [[ ! -e "$DEPLOY_DIRECTORY/assets" ]]; then
-	mkdir	$DEPLOY_DIRECTORY/assets
+	mkdir $DEPLOY_DIRECTORY/assets
+fi
+if [[ ! -e "$DEPLOY_DIRECTORY/assets/fonts" ]]; then
+	mkdir $DEPLOY_DIRECTORY/assets/fonts
 fi
 if [[ ! -e "$DEPLOY_DIRECTORY/images" ]]; then
-	mkdir	$DEPLOY_DIRECTORY/images
+	mkdir $DEPLOY_DIRECTORY/images
 fi
 
 echo "Copy assets over"
 cp $BUILD_FOLDER/assets/*.* "$DEPLOY_DIRECTORY/assets"
+cp $BUILD_FOLDER/assets/fonts/*.* "$DEPLOY_DIRECTORY/assets/fonts"
 cp $BUILD_FOLDER/images/*.* "$DEPLOY_DIRECTORY/images"
 
 echo "Remove the post.html files in the build directories"
@@ -30,6 +35,11 @@ cp "$BUILD_FOLDER/who/index.html" "$DEPLOY_DIRECTORY/who"
 echo "Copy new resources page"
 cp "$BUILD_FOLDER/resources/index.html" "$DEPLOY_DIRECTORY/resources"
 
+echo "Copy new articles page"
+cp "$BUILD_FOLDER/articles/index.html" "$DEPLOY_DIRECTORY/articles"
+
 echo "Copy over the complete blog structure"
 cp -R "$BUILD_FOLDER/log" "$DEPLOY_DIRECTORY"
 
+echo "Remove the drafts"
+rm -rf "$DEPLOY_DIRECTORY/log/drafts"
