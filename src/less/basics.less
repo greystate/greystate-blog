@@ -1,15 +1,21 @@
+
 body {
+	.bodyFont();
+
 	font-size: 1em;
-	font-family: "Avenir Next", "Avenir", Helvetica, sans-serif;
-	
+
 	padding-right: 1em;
 	padding-left: 1em;
-	
+
 	background: @bg_color_light;
 	background: var(--bgcolor);
 
 	color: @text_color_light;
 	color: var(--fgcolor);
+}
+
+:where(h1, h2, h3, h4) {
+	.headerFont();
 }
 
 a {
@@ -29,7 +35,7 @@ a {
 	a:not([class]):active {
 		color: var(--link-color-light);
 	}
-	
+
 	:focus {
 		outline-color: var(--link-color-light-50);
 	}
@@ -42,7 +48,7 @@ a {
 	a:not([class]):active {
 		color: var(--link-color-dark);
 	}
-	
+
 	:focus {
 		outline-color: var(--link-color-dark-50);
 	}
