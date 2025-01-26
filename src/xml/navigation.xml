@@ -3,9 +3,21 @@
 <navigation baseUrl="https://greystate.dk/" class="links">
 	<link slug="/" name="Home" />
 	<link slug="log" name="Blog" subclass="archives">
+		<link name="2024">
+			<link slug="02" name="February" hide="yes">
+				<link slug="28/local-cloud-database" name="Connecting To The Umbraco Cloud Database From Your Local Instance" hide="yes" />
+			</link>
+		</link>
+		<link name="2023">
+			<link slug="07" name="July" hide="yes">
+				<link slug="20/querystring-razor" name="How To Get a QueryString Value in Razor" hide="yes" />
+			</link>
+			<link slug="11" name="November" hide="yes">
+				<link slug="18/razor-helper" name="A Razor @helper block for .NET Core" hide="yes" />
+			</link>
+		</link>
 		<link name="2022">
 			<link slug="02" name="February" hide="yes">
-				<link slug="11/reading-update" name="An Update On The Reading Situation" hide="yes" />
 				<link slug="05/secrets" name="Using UserSecrets for Connection Strings" hide="yes" />
 			</link>
 		</link>
@@ -51,6 +63,7 @@
 		</link> -->
 	</link>
 	<link slug="who" name="About" />
+	<link slug="articles" name="Articles" />
 	<link slug="resources" name="Resources" subclass="res">
 		<link url="https://greystate.dk/resources/objredux/" slug="objredux" name="Object Builder" />
 		<link url="https://greystate.dk/resources/umbraco/razor-reference/" slug="umbraco/razor-reference" name="Razor QuickRef" />

@@ -38,11 +38,13 @@ What's rendered by Umbraco is of my own doing - not someone else's.
 Current toolset
 ---------------
 
-I host a lot of code on [GitHub][GHPROFILE] and post a lot of words on [Twitter][TWT].
+I host a lot of code on [GitHub][GHPROFILE] and used to post a lot of words on [Twitter][TWT] (RIP),
+but now I've rebooted on [Mastodon][MSTDN] and will probably end up posting lots of words there
+in the future.
 
 I've been using [TextMate][TEXTMATE] since forever, but these days I'm using
-[Panic][PANIC]'s brand new [Nova][NOVA] code editor more and more, which
-I like quite a lot.
+[Panic][PANIC]'s very excellent [Nova][NOVA] code editor almost exclusively,
+and I like it quite a lot.
 
 I use [CodeKit][CK] for all things compiling (Less, ES6 etc.).
 
@@ -55,3 +57,4 @@ I use [CodeKit][CK] for all things compiling (Less, ES6 etc.).
 [CK]: https://codekitapp.com
 [GHPROFILE]: https://github.com/greystate
 [TWT]: https://twitter.com/greystate
+[MSTDN]: https://mastodon.social/@greystate

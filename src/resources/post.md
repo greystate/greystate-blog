@@ -12,6 +12,12 @@ and to be able to grab the stubbed-out code as a start.
 
 [OBJRDX]: /resources/objredux/
 
+## [Grid Overlay][GRID]
+
+A developer tool for adding an overlay to a webpage as you're developing it,
+to check against the design's grid.
+
+[GRID]: https://github.com/vokseverk/grid-overlay/#readme
 
 ## [Maximum Request Length Calculator][MAXLEN]
 
@@ -22,13 +28,26 @@ need to allow a certain size for uploads.
 [MAXLEN]: /resources/umbraco/maxrequestlength/
 
 
+## [XSLT Quick Reference][XSLTREF]
+
+My own format for a quick reference of XSLT elements and functions.
+
+[XSLTREF]: https://xslt.dk/reference/
+
 ## [Umbraco Razor Quick Reference][RAZREF]
 
-My own format for quick reference of Razor as used in Umbraco.
+Using the same format for quick reference of Razor as used in Umbraco.
 
 [RAZREF]: /resources/umbraco/razor-reference/
 
+## [Greystate XML Namespaces][XMLNS]
 
+My library of XML Schemas for various XML formats I have been (and still are) using.
+
+[XMLNS]: https://xmlns.greystate.dk
+
+
+<!--
 ## [MixedIn][MIXS]
 
 A `.less` file with a set of mixins I seem to be using on most
@@ -45,7 +64,7 @@ that I also wanted to keep handy and available - think jQuery
 but 100× smaller (if not 1,000×).
 
 [HELPS]: /helpers/helpers.html
-
+-->
 
 ## [Subtree Merge][SUBMERGE]
 
