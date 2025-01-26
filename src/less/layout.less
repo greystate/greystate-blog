@@ -1,0 +1,59 @@
+body {
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+	> footer {
+		margin-top: auto;
+		
+		.logo {
+			margin: 1em auto;
+			opacity: 0.2;
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body > footer .logo {
+		opacity: 0.8;
+		mix-blend-mode: multiply;
+	}
+}
+
+@supports(display: grid) {
+
+	article when (@enable_grid = true) {
+		margin: 0 0 3rem;
+		max-width: none;
+		
+		display: grid;
+		
+		grid-template-columns:
+			[full-start]
+				minmax(auto, 1fr)
+				[header-start]
+					1fr
+					[code-start]
+					1fr
+					[content-start] minmax(auto, 75ch) [content-end]
+					2fr
+					[code-end]
+					1fr
+				[header-end]
+				minmax(auto, 1fr)
+			[full-end];
+		
+		// Default to the `content` column
+		> * { grid-column: content; }
+		
+		> h1, > .date {
+			grid-column: header;
+		}
+		
+		> [class*="language-"] {
+			grid-column: code;
+		}
+	}
+	
+} // @supports

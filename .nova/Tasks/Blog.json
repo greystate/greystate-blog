@@ -1,0 +1,13 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "path" : "DEPLOY.sh"
+    }
+  },
+  "environment" : {
+    "TM_PROJECT_DIRECTORY" : "${WorkspaceFolder}"
+  },
+  "identifier" : "0A313366-82C8-4CAB-BF52-A0A8178AB291",
+  "openLogOnRun" : "finish"
+}

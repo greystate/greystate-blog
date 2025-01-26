@@ -1,6 +1,7 @@
-# CSS Variables TextMate Bundle
+CSS Variables TextMate Bundle
+=============================
 
-<time data-slug="css-variables-bundle" datetime="2008-05-06T02:09:38+0200"> 6 May, 2008</time>
+<time datetime="2008-05-06T02:09:38+0200"> 6 May, 2008</time>
 
 So a couple of weeks ago, I'm discussing with my good friend and colleague
 [Sebastian][SEB], that I'd been trying
@@ -34,3 +35,5 @@ if you're using/hating it…
 [CSSVARS]: http://disruptive-innovations.com/zoo/cssvariables/
 [BUNDLE]: https://greystate.dk/resources/css-variables/ "TextMate Bundle for CSS Variables"
 [MAIL]: mailto:chriztian@SP@M@steinmeier.dk "- or just say 'Hi'..."
+
+<data data-slug="css-variables-bundle"></data>

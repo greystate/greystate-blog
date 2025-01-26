@@ -1,6 +1,7 @@
-# What a Glorious Mess
+What a Glorious Mess
+====================
 
-<time data-slug="glorious-mess" datetime="2019-10-04T21:42:00+0200">4 Oct, 2019</time>
+<time datetime="2019-10-04T21:42:00+0200">4 Oct, 2019</time>
 
 I have a Point to make, and since I've been very fond of CoffeeScript for years,
 I'll be using that to make it:
@@ -39,7 +40,8 @@ When I say "perfectly readable", I mean just that - if someone wanted to take a 
 source for something, the browser's "View Source" menu was brilliant and the above would make
 sense to most developers familiar with JavaScript.
 
-## New Shiny
+New Shiny
+---------
 
 Then CoffeeScript 2.x came along, and because ES6 in the meantime had adopted
 quite a lot of the stuff we already knew from CoffeeScript, the compiled code
@@ -106,3 +108,4 @@ How on earth is *anyone* going to learn from reading that? Let alone spark that
 curious "Aah, I see - so *that's* how you do that..." that fuels so many hours of
 poking around other people's source code, that got myself to where I am today?
 
+<data data-slug="glorious-mess"></data>
